@@ -1,0 +1,30 @@
+﻿@using ARCO.Entities;
+@using ARCO.Entities.Models;
+@{
+    List<ProductEntity> products = ViewBag.products;
+}
+@{
+    foreach (var item in products)
+    {
+        <div class="col-md-6 col-xl-4">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <a href="/Product/ProductDetails?id=@item.id&title=@item.name">
+                        <img src="@item.image" alt="@item.name" onerror="this.src = '/Assets/img/default.jpg'" width="270" height="270">
+                        <div class="ribbons">
+                            <span class="ribbon ribbon-hot">فروش</span>
+                            <span class="ribbon ribbon-onsale align-right">-15%</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h4 class="title"><a href="/ProductDetail/@item.id/@item.name">@item.name</a></h4>
+                    <div class="prices">
+                        <span class="price">@item.price ریال</span>
+                        <del class="price-old">@item.price ریال</del>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

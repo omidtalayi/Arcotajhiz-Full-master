@@ -1,0 +1,11 @@
+﻿CREATE TABLE [AZ].[Category]
+(
+	[id] UNIQUEIDENTIFIER DEFAULT NEWSEQUENTIALID() PRIMARY KEY, 
+    [name] NCHAR(50) NULL, 
+    [image] NVARCHAR(50) NULL,
+    [parentID] UNIQUEIDENTIFIER NULL,
+    [createDate] DATE DEFAULT(GETDATE()) NOT NULL,
+    [lastModifiedDate] DATE DEFAULT(GETDATE()) NOT NULL, 
+    [isDeleted] BIT NOT NULL DEFAULT 0, 
+    [isEnabled] BIT NOT NULL DEFAULT 1,
+)

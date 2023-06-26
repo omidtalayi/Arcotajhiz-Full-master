@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE [AZ].[GetTotalPageRates]
+AS
+BEGIN
+	SELECT COUNT(1) Cnt,AVG(Rate) Rate FROM AZ.PagesRate (NOLOCK) 
+END

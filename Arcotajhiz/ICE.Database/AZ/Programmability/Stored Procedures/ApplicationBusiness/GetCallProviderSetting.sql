@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [AZ].[GetCallProviderSetting]
+AS BEGIN
+	SELECT CALLAPIKey [CALLAPIKey],CALLVoiceID [CALLVoiceID],CALLAPIUrl [CALLAPIUrl] FROM
+	(
+		SELECT [Key],[Value] FROM [AZ].[ApplicationSetting] (NOLOCK) WHERE [Key] IN ('CALLAPIKey','CALLVoiceID','CALLAPIUrl')
+	) Main PIVOT (MIN(Value) FOR [Key] IN ([CALLAPIKey],[CALLVoiceID],[CALLAPIUrl])) PV
+END

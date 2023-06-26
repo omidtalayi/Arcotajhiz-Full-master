@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [AZ].[GetUserVCodeByEmail](
+	@Email NVARCHAR(500)
+)
+AS
+BEGIN
+	SELECT ISNULL(VCode,0) Email FROM AZ.[User] WHERE Email = @Email
+END

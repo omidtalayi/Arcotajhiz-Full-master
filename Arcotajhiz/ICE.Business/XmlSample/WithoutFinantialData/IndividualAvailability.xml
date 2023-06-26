@@ -1,0 +1,30 @@
+<BatchResponse
+	xmlns="http://cb4.creditinfosolutions.com/BatchUploader/Batch">
+	<Header>
+		<BatchId>135752927</BatchId>
+		<State>Finished</State>
+		<BeginTimeStamp>2019-10-09T11:27:36.5626149Z</BeginTimeStamp>
+		<TimeStamp>2019-10-09T11:27:39.1217795Z</TimeStamp>
+		<FinishTimeStamp>2019-10-09T11:27:39.1217795Z</FinishTimeStamp>
+		<Duration>2.5592</Duration>
+		<Identifier>1440623427</Identifier>
+		<Subscriber>HooshoDanesh</Subscriber>
+		<SubscriberUnit>It</SubscriberUnit>
+		<CommandsUploaded>1</CommandsUploaded>
+		<CommandsCompleted>1</CommandsCompleted>
+	</Header>
+	<Commands>
+		<Command identifier="1">
+			<Cis.CB4.Projects.IR.IranCreditScoring.Reports.Body.Products.AvailableIndividualReport.Response
+				xmlns="http://cb4.creditinfosolutions.com/BatchUploader/Batch">
+				<Reports.SummaryReport>
+					<Reports.Lookups.ReportStatus>ReportStatus.OK</Reports.Lookups.ReportStatus>
+					<Reports.AvailableIndividualReportData>
+						<Types.Subject.Individual.PersonalCode>1000000000</Types.Subject.Individual.PersonalCode>
+					</Reports.AvailableIndividualReportData>
+					<ReportDate>2019-10-09T11:27:38.8880745Z</ReportDate>
+				</Reports.SummaryReport>
+			</Cis.CB4.Projects.IR.IranCreditScoring.Reports.Body.Products.AvailableIndividualReport.Response>
+		</Command>
+	</Commands>
+</BatchResponse>

@@ -1,0 +1,45 @@
+<BatchResponse
+	xmlns="http://cb4.creditinfosolutions.com/BatchUploader/Batch">
+	<Header>
+		<BatchId>135752934</BatchId>
+		<State>Finished</State>
+		<BeginTimeStamp>2019-10-09T11:27:41.9135521Z</BeginTimeStamp>
+		<TimeStamp>2019-10-09T11:27:43.8646021Z</TimeStamp>
+		<FinishTimeStamp>2019-10-09T11:27:43.8646021Z</FinishTimeStamp>
+		<Duration>1.9510</Duration>
+		<Identifier>1782333115</Identifier>
+		<Subscriber>HooshoDanesh</Subscriber>
+		<SubscriberUnit>It</SubscriberUnit>
+		<CommandsUploaded>1</CommandsUploaded>
+		<CommandsCompleted>1</CommandsCompleted>
+	</Header>
+	<Commands>
+		<Command identifier="1">
+			<Cis.CB4.Projects.IR.IranCreditScoring.Reports.Body.Products.ScoringIndividualReport.Response
+				xmlns="http://cb4.creditinfosolutions.com/BatchUploader/Batch">
+				<Reports.PersonalInformation>
+					<PersonalCode></PersonalCode>
+					<FathersName></FathersName>
+					<FirstName></FirstName>
+					<Surname></Surname>
+					<Lookups.Gender></Lookups.Gender>
+					<DateOfBirth></DateOfBirth>
+				</Reports.PersonalInformation>
+				<Reports.Lookups.ReportStatus>ReportStatus.OK</Reports.Lookups.ReportStatus>
+				<Reports.ScoringInformation>
+					<ICSScore>-1</ICSScore>
+					<RiskGrade>RiskGrade.XX</RiskGrade>
+					<ReasonCodes>
+						<ReasonCodeList key="0">
+							<ReasonCode>CIPSReasonCodes.XNOC</ReasonCode>
+						</ReasonCodeList>
+					</ReasonCodes>
+					<ScoreRange>-1</ScoreRange>
+					<ScoreDescription>ScoreDescription.ExcludedFromScoring</ScoreDescription>
+				</Reports.ScoringInformation>
+				<ScoringReportComments />
+				<ReportDate>2019-10-09T11:27:42.3666003Z</ReportDate>
+			</Cis.CB4.Projects.IR.IranCreditScoring.Reports.Body.Products.ScoringIndividualReport.Response>
+		</Command>
+	</Commands>
+</BatchResponse>

@@ -1,0 +1,11 @@
+﻿CREATE TABLE [AZ].[UserRole]
+(
+	[VCode]				BIGINT		IDENTITY(1,1)	NOT NULL,
+	[UserVCode]			BIGINT		NOT NULL,
+	[RoleVCode]			INT			NOT NULL,
+    [EntryDate]			DATETIME	CONSTRAINT [DC_UserRole_EntryDate] DEFAULT(GETDATE()) NOT NULL
+    CONSTRAINT [PK_UserRole] PRIMARY KEY CLUSTERED ([VCode] ASC),
+	CONSTRAINT [FK_UserRole_User] FOREIGN KEY ([UserVCode]) REFERENCES [AZ].[User]([VCode]),
+	CONSTRAINT [FK_UserRole_Role] FOREIGN KEY ([RoleVCode]) REFERENCES [AZ].[Role]([VCode])
+)
+

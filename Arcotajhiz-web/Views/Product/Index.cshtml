@@ -1,0 +1,330 @@
+﻿@using ARCO.Entities
+@using ARCO.Entities.Models;
+@using System.Linq;
+@{
+    ViewBag.Title = "محصولات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<ProductEntity> products = ViewBag.products;
+    CategoryEntity category = ViewBag.category;
+    List<ProductPropertyEntity> productprops = ViewBag.productprops;
+    List<CategoryEntity> productCategories = ViewBag.productCategories;
+}
+
+<main class="main-content site-wrapper-reveal">
+    <section class="page-title-area" data-bg-img="../assets/img/photos/bg-page-title.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-title-content text-center">
+                        <h2 class="title text-white">@(string.IsNullOrEmpty(category.name) ? "محصولات" : category.name )</h2>
+                        <div class="bread-crumbs">
+                            <a href="/">خانه<span class="breadcrumb-sep">/</span></a>
+                            @{
+                                if (category != null && !string.IsNullOrEmpty(category.name))
+                                {
+                                    <a href="/Product">محصولات<span class="breadcrumb-sep">/</span></a>
+                                    <span class="active">@category.name</span>
+                                }
+                                else
+                                {
+                                    <span class="active">محصولات</span>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-area product-grid-area">
+        <div class="container">
+            <div class="row flex-row-start">
+                <div class="col-lg-3">
+                    <div class="shop-sidebar-area">
+                        <div class="widget">
+                            <h3 class="widget-title">جستجو</h3>
+                            <div class="widget-search-box">
+                                <form action="#" method="post">
+                                    <div class="form-input-item search-from">
+                                        <label for="search2" class="sr-only">جتسجو...</label>
+                                        <input type="text" id="search2" placeholder="">
+                                        <a id="btnSearch" href="#" class="btn-src btn btn-default"><i class="ion-ios-search-strong"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="widget">
+                            <h3 class="widget-title">دسته بندی محصولات</h3>
+                            <div class="widget-categories-menu">
+                                <ul>
+                                    @{ if (productCategories != null && productCategories.Any())
+                                        {
+                                            foreach (var item in productCategories)
+                                            {
+                                                <li><a class="filter-product-category" href="/Product/Category?id=@item.id&title=@item.name">@item.name </a></li>
+                                            }
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        @{
+                            if (productprops != null && productprops.Any())
+                            {
+                                foreach (var group in productprops.GroupBy(g => g.Property.name).ToList())
+                                {
+                                    <div class="widget">
+                                        <h3 class="widget-title">@group.Key</h3>
+                                        <div class="widget-list-style">
+                                            <ul>
+                                                @foreach (var innerItem in group)
+                                                {
+                                                    <li><a class="filter-product-property" data-id="@innerItem.id" href="#">@innerItem.value</a></li>
+                                                }
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="shop-topbar-wrapper">
+                                <div class="collection-shorting">
+                                    <div class="shop-topbar-left">
+                                        <div class="view-mode">
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <button class="nav-link active" id="nav-grid-tab" data-bs-toggle="tab" data-bs-target="#nav-grid" type="button" role="tab" aria-controls="nav-grid" aria-selected="true"><i class="fa fa-th"></i></button>
+                                                    <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="false"><i class="fa fa-list-ul"></i></button>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                        <p>نمایش 1 - 15 از 33 نتیجه</p>
+                                    </div>
+                                    @*<div class="product-sorting-wrapper">
+                                            <div class="product-show">
+                                                <label for="SortBy">مرتب سازی بر اساس</label>
+                                                <select class="form-select" id="SortBy" aria-label="Default select example">
+                                                    <option value="best-selling">بیشترین فروش</option>
+                                                    <option value="title-ascending" selected>حروف الفبا, آ-ی</option>
+                                                    <option value="title-descending">حروف الفبا, ی-آ</option>
+                                                    <option value="price-ascending">قیمت, کم به زیاد</option>
+                                                    <option value="price-descending">قیمت, زیاد به کم</option>
+                                                    <option value="created-descending">تاریخ, جدید به قدیم</option>
+                                                    <option value="created-ascending">قدیم, تاریخ به جدید</option>
+                                                </select>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
+                            <div class="row products-container">
+                                @Html.Partial("_Products");
+                            </div>
+                        </div>
+                        @*<div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab">
+                            <div class="row products-container2">
+                                @Html.Partial("_ProductsH");
+                            </div>
+                        </div>*@
+                    </div>
+                    @*<div class="pagination-area">
+                            <nav>
+                                <ul class="page-numbers">
+                                    <li>
+                                        <a class="page-number disabled next" href="blog.html">
+                                            <i class="ion-ios-arrow-right"></i>
+                                            قبلی
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number active" href="blog.html">1</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number" href="blog.html">2</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number" href="blog.html">3</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number next" href="blog.html">
+                                            بعدی
+                                            <i class="ion-ios-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="total-pages">
+                                <p>نمایش 1 - 15 از 33 نتیجه</p>
+                            </div>
+                        </div>*@
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+@section Scripts{
+    <script>
+        var loading = false;
+        var pageNo = 1;
+        var isFirstFetch = true;
+        var searchKeyword = "";
+        var url = new URL(window.location);
+        var props = [];
+        var categoryId = "";
+        $(document).ready(function () {
+            categoryId = getParameterByName("id")
+            let currentPageNo = getParameterByName("pageNo");
+            if (currentPageNo) {
+                pageNo = parseFloat(currentPageNo);
+            }
+            if (isFirstFetch) {
+                nextPageBtnHandler();
+            }
+            $(document).on("click", ".filter-product-property", function (e) {
+                e.preventDefault();
+                
+                var btn = this;
+                var id = $(btn).data("id");
+                if (props && props.find(x => x == id)) {
+                    var prop = props.find(x => x == id);
+                    var index = props.indexOf(prop);
+                    props.splice(index, 1);
+                    $(btn).removeClass("selected");
+                } else {
+                    props.push($(btn).data("id"));
+                    $(btn).addClass("selected");
+                }
+                refreshFilters();
+                fetchProducts();
+            });
+            if (url.searchParams.has("props")) {
+                props = url.searchParams.get("props").split(",");
+                initPropsHtml();
+                fetchProducts();
+            }
+
+            $(document).on("click", "#btnSearch", function (e) {
+                e.preventDefault();
+                var btn = this;
+                searchKeyword = $("#search2").val();
+                deleteProps();
+                fetchProducts();
+
+            });
+            $(document).on("click", ".nextPage", function (e) {
+                e.preventDefault();
+                pageNo++;
+                fetchNextProducts()
+            });
+            $(document).on('scroll', function (e) {
+                
+                var btn = $(".nextPage");
+                if ($(document).scrollTop() + $(btn).innerHeight() >= $(btn)[0].scrollHeight) {
+                    
+                    if (!loading) {
+                        loading = true;
+                        pageNo++;
+                        fetchNextProducts()
+                    }
+                }
+            })
+        });
+        function refreshFilters() {
+            deleteProps();
+            if (props && props.length > 0) {
+                setProps();
+            }
+        }
+        function deleteProps() {
+            url.searchParams.delete('props');
+            window.history.pushState({}, ',', url);
+        }
+        function setProps() {
+            url.searchParams.set("props", props)
+            window.history.pushState({}, ',', url);
+        }
+        function initPropsHtml() {
+            for (var item of props) {
+                var el = $('a[data-id="' + item + '"]');
+                $(el).addClass("selected");
+            }
+        }
+        function fetchProducts() {
+            debugger;
+            $.ajax({
+                type: "GET",
+                url: "/Product/SearchProducts",
+                data: { keyword: searchKeyword, props: props.join(","),pageNo : 1 },
+                dataType: "html",
+                beforeSend: function () {
+                    $(".products-container").html('<div style="display:flex;justify-content: center;margin-bottom: 28px;"><div class="spinner-border text-success"></div></div>')
+                },
+                success: function (res) {
+                    
+                    if (res) {
+                        $(".products-container").html(res);
+                    }
+                }, error(res) {
+                    
+                }
+            })
+        }
+        function fetchNextProducts() {
+            $.ajax({
+                type: "GET",
+                url: "/Product/SearchProducts",
+                data: { keyword: searchKeyword, props: props.join(","), pageNo: pageNo, categoryId : categoryId },
+                dataType: "html",
+                success: function (res) {
+                    
+                    if (res) {
+                        $(".products-container").append(res);
+                    }
+                    loading = false;
+                    nextPageBtnHandler()
+                }, error(res) {
+                    
+                    loading = false;
+                }
+            })
+        }
+        function nextPageBtnHandler() {
+            var container1 = $(".products-container");
+            $(".nextPage").remove();
+            $(container1).after('<div class="nextPage" style="width:100%; text-align:center;">' +
+                '<a href="' + window.location.pathname + '?pageNo=' + (pageNo + 1) + '">' +
+                '<div style="display:flex;justify-content: center;margin-bottom: 28px;"><div class="spinner-border text-success"></div></div>' +
+                '</a>' +
+                '</div>');
+            isFirstFetch = false;
+        }
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    </script>
+}

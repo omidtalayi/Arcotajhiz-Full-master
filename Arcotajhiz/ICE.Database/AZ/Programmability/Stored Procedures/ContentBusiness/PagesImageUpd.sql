@@ -1,0 +1,29 @@
+﻿CREATE PROCEDURE [AZ].[PagesImageUpd](
+	@VCode INT,
+	@Name NVARCHAR(500) = NULL,
+	@PagesVCode INT = 0
+)
+AS
+BEGIN
+	BEGIN TRAN
+	BEGIN TRY
+		IF @PagesVCode = 0
+		BEGIN
+			UPDATE AZ.PagesImage 
+			SET [Name] = ISNULL(@Name,[Name])
+			WHERE VCode = @VCode
+		END 
+		ELSE
+		BEGIN
+			INSERT INTO AZ.PagesImage([Name],PagesVCode) 
+			VALUES(@NAME,@PagesVCode)
+		END
+		COMMIT TRAN
+	END TRY
+		BEGIN CATCH
+		DECLARE @ErrNo INT,@ErrMsg NVARCHAR(4000),@ErrSev INT,@ErrStt INT
+		SELECT @ErrMsg = '(' + CONVERT(NVARCHAR(4000),ERROR_NUMBER()) + ') ' + ERROR_MESSAGE(),@ErrSev = ERROR_SEVERITY(),@ErrStt = ERROR_STATE()
+		IF @@TRANCOUNT > 0 ROLLBACK TRAN
+		RAISERROR(@ErrMsg,@ErrSev,@ErrStt)
+	END CATCH
+END

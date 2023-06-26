@@ -1,0 +1,202 @@
+﻿@using ARCO.Entities.Models;
+@using System.Linq;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    PagesEntity item = ViewBag.item;
+    ViewBag.Title = "پروژه ها | " + item.Title;
+}
+
+<main class="main-content site-wrapper-reveal">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area" data-bg-img="../assets/img/photos/bg-page-title.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-title-content text-center">
+                        <h2 class="title text-white">@item.Name</h2>
+                        <div class="bread-crumbs">
+                            <a href="/">
+                                خانه
+                                <span class="breadcrumb-sep">/</span>
+                            </a>
+                            <a href="/blog">
+                                بلاگ
+                                <span class="breadcrumb-sep">/</span>
+                            </a>
+                            <span class="active">@item.Name</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Page Title Area ==-->
+    <!--== Start Blog Area Wrapper ==-->
+    <section class="blog-grid-area">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-9">
+                    <div class="post-details-content">
+                        <div class="post-details-body">
+                            <div class="content">
+                                <div class="thumb">
+                                    <img src="@item.Image" title="@item.Name" alt="@item.Name">
+                                </div>
+                                <h4>@item.Name</h4>
+                                <ul class="meta">
+                                    <li class="date">تاریخ : @item.FormattedJDate</li>
+                                    <li class="author">توسط : ادمین</li>
+                                </ul>
+                                <p>@Html.Raw(item.Body)</p>
+
+
+                                @*<div class="category-social-content">
+                                        <div class="category-items">
+                                            <a href="blog.html">Baller</a>
+                                            <a href="blog.html">Corer</a>
+                                            <a href="blog.html">Cups</a>
+                                            <a href="blog.html">Ladle</a>
+                                            <a href="blog.html">Ricer</a>
+                                            <a href="blog.html">Spatula</a>
+                                        </div>
+                                        <div class="social-items">
+                                            <span>share :</span>
+                                            <a href="#/"><i class="ion-social-facebook"></i></a>
+                                            <a href="#/"><i class="ion-social-twitter"></i></a>
+                                            <a href="#/"><i class="ion-social-pinterest"></i></a>
+                                            <a href="#/"><i class="ion-social-googleplus"></i></a>
+                                        </div>
+                                    </div>*@
+                            </div>
+                            <div class="comment-area">
+                                <h2 class="title">نظرات</h2>
+                                <p> در حال حاضر نظری برای بلاگ ثبت نشده است. </p>
+
+                                @*<div class="comment-content">
+                                        <div class="single-comment">
+                                            <div class="author-info">
+                                                <div class="thumb">
+                                                    <img src="~/assets/img/blog/c1.jpg" alt="Image">
+                                                </div>
+                                                <div class="author-details">
+                                                    <h4 class="name">نام</h4>
+                                                    <div class="comment-date">تاریخ </div>
+                                                    <p>متن نظر</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                <div class="comment-form">
+                                    <h2 class="title">نظر دهید</h2>
+                                    <form action="#" method="post">
+                                        <div class="comment-form-content">
+                                            <div class="row row-gutter-20">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="text" placeholder="نام" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="email" placeholder="ایمیل" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group mb-0">
+                                                        <textarea class="form-control textarea" name="comment" id="نظر" cols="45" rows="7" placeholder="پیغام" required=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <button class="btn btn-theme" type="submit">ارسال</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar-area mt-md-70">
+                        @*<div class="widget">
+                                <div class="widget-search-box">
+                                    <form action="#" method="post">
+                                        <div class="form-input-item">
+                                            <label for="search2" class="sr-only">جستجو</label>
+                                            <input type="text" id="search2" placeholder="جستجو...">
+                                            <button type="submit" class="btn-src">
+                                                <i class="ion-ios-search-strong"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h3 class="widget-title">پست های اخیر</h3>
+                                <div class="widget-blog-post">
+                                    <ul>
+                                        <li>
+                                            <div class="thumb">
+                                                <a href="blog-details.html"><img src="~/assets/img/blog/s1.png" alt="Image-HasTech"></a>
+                                            </div>
+                                            <div class="content">
+                                                <a href="blog-details.html">متن</a>
+                                                <span>تاریخ</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h3 class="widget-title">آرشیو</h3>
+                                <div class="widget-archive">
+                                    <h4 class="archive-date">January 2021</h4>
+                                    <ul>
+                                        <li><a href="blog.html">متن</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>*@
+                        <div class="widget mb-0 pb-3">
+                            <h3 class="widget-title">مارا در دنبال کنید</h3>
+                            <div class="widget-socials">
+                                <a href="#/"><i class="fa fa-facebook"></i></a>
+                                <a href="#/"><i class="fa fa-twitter"></i></a>
+                                <a href="#/"><i class="fa fa-instagram"></i></a>
+                                <a href="#/"><i class="fa fa-skype"></i></a>
+                            </div>
+                        </div>
+                        @{
+                            if (!string.IsNullOrEmpty(item.Keywords))
+                            {
+
+                                <div class="widget mb-0 pb-3">
+                                    <h3 class="widget-title">تگ ها</h3>
+                                    <div class="widget-tags">
+                                        <ul>
+                                            @{
+
+                                                foreach (var keyword in item.Keywords.Split(','))
+                                                {
+                                                    <li><a href="#/@keyword">@keyword / </a></li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Blog Area Wrapper ==-->
+</main>
+

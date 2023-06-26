@@ -1,0 +1,366 @@
+﻿@using ARCO.Entities.Models;
+@using System.Linq;
+@using System.Text.RegularExpressions
+@{
+    ViewBag.Title = "تجهیزات آشپزخانه صنعتی - آرکو تجهیز";
+    Layout = null;
+    List<ProductEntity> products = ViewBag.mainPageProducts;
+    List<PagesEntity> mainPages = ViewBag.mainPages;
+    List<PagesEntity> mainArticle = ViewBag.mainArticle;
+}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>تجهیزات آشپزخانه صنعتی - آرکو تجهیز </title>
+
+    <link rel="shortcut icon" href="~/Assets/img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,400i,500,600,700" rel="stylesheet">
+    <link rel="canonical" href="https://arcotajhiz.ir/">
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/animate.css" rel="stylesheet" />
+    <link href="~/Assets/css/aos.css" rel="stylesheet" />
+    <link href="~/Assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/slicknav.css" rel="stylesheet" />
+    <link href="~/Assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <meta name="description" content="شرکت آرکو تجهیز مجری عملیات طراحی، تهیه، تولید و نصب تجهیزات آشپزخانه های صنعتی مفتخر است طی چندین سال اخیر جهت ارتقاء سطح کیفی و کمی خدمات ...">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="og:title" content="تجهیزات آشپزخانه صنعتی - آرکو تجهیز">
+    <meta property="og:description" content="شرکت آرکو تجهیز مجری عملیات طراحی، تهیه، تولید و نصب تجهیزات آشپزخانه های صنعتی مفتخر است طی چندین سال اخیر جهت ارتقاء سطح کیفی و کمی خدمات ...">
+
+</head>
+
+<body>
+    <div class="wrapper home-default-wrapper">
+        <div class="preloader-wrap">
+            <div class="preloader">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        @Html.Partial("_Menu")
+        <main class="main-content">
+            <section class="home-slider-area slider-default">
+                <div class="home-slider-content">
+                    <div class="swiper-container home-slider-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="home-slider-item bg-img-cover" data-bg-img="../assets/img/slider/3.png">
+                                    <div class="slider-content-area">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="content m-auto">
+                                                        <div class="inner-content">
+                                                            <div class="tittle-wrp">
+                                                                <h2>جدیدترین<br>لوازم را از ما بخواهید</h2>
+                                                            </div>
+                                                            <div class="btn-wrp">
+                                                                <a href="/Product" class="btn-link">خرید</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-slider-item bg-img-cover" data-bg-img="../assets/img/slider/4.png">
+                                    <div class="slider-content-area">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="content m-auto">
+                                                        <div class="inner-content">
+                                                            <div class="tittle-wrp">
+                                                                <h2>لوازم اشپزخانه <br>لوازم جانبی</h2>
+                                                            </div>
+                                                            <div class="btn-wrp">
+                                                                <a href="/Product" class="btn-link">خرید</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product-area latest-product-area" data-aos="fade-up" data-aos-duration="1000">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="swiper-container product4-slider-container">
+                                <div class="swiper-wrapper">
+                                    @foreach (ProductEntity item in products)
+                                    {
+                                        <div class="swiper-slide">
+                                            <div class="product-item">
+                                                <div class="product-thumb">
+                                                    <a href="/Product/ProductDetails?id=@item.id&title=@item.name">
+                                                        <img src="@item.image" alt="@item.name" title="@item.name" width="270" height="270">
+                                                        @*<div class="ribbons">
+                                                                <span class="ribbon ribbon-hot">تخفیف</span>
+                                                                <span class="ribbon ribbon-onsale align-right">-15%</span>
+                                                            </div>*@
+                                                    </a>
+                                                </div>
+                                                <div class="product-info">
+                                                    <h4 class="title"><a href="/Product/ProductDetails?id=@item.id&title=@item.name">@item.name</a></h4>
+                                                    <div class="prices">
+                                                        <span class="price">تماس بگیرید</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product-area featured-product-area" data-aos="fade-up" data-aos-duration="1000">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-6 m-auto">
+                            <div class="section-title text-center">
+                                <h2 class="title">آخرین پروژه ها</h2>
+                                <p>سازمان، ارگان، رستوران،فودکورت</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        @foreach (PagesEntity item in mainPages)
+                        {
+
+
+                            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                                <div class="product-item">
+                                    <div class="product-thumb">
+                                        <a href="/Projects/ProjectDetails?id=@item.Id" title="@item.Name">
+                                            <img src="@item.Image" alt="@item.Name" title="@item.Name">
+
+                                        </a>
+                                        @*<div class="product-action">
+                                                <a class="action-wishlist" href="#/" title="Wishlist">
+                                                    <i class="ion-android-favorite-outline"></i>
+                                                </a>
+                                                <a class="action-quick-view" href="javascript:void(0);" title="Quick View">
+                                                    <i class="ion-ios-search-strong"></i>
+                                                </a>
+                                                <a class="action-cart" href="#/">
+                                                    <i class="fa fa-opencart"></i>
+                                                </a>
+                                            </div>*@
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="title"><a href="/Projects/ProjectDetails?id=@item.Id">@item.Name</a></h4>
+                                        @*<div class="prices">
+
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+            <section class="newsletter-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 m-auto" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="section-title text-center">
+                                <h2 class="title">ارتباط با ما</h2>
+                                <p>جهت ارتباط با ما شماره تماس خود را وارد نمایید</p>
+                            </div>
+                            <form class="input-btn-group">
+                                <input class="form-control" type="text" placeholder="شماره موبایل">
+                                <button class="btn btn-theme btn-black" type="button">ثبت!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="blog-area blog-default-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-6 m-auto" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="section-title text-center">
+                                <h2 class="title">آخرین مقالات</h2>
+                                <p>جهت با خبر شدن از آخرین دست اوردها ما را دنبال کنید</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" data-aos="fade-up" data-aos-duration="1000">
+                        @foreach (PagesEntity item in mainArticle)
+                        {
+                            <div class="col-md-6">
+                                <div class="post-item mb-sm-30">
+                                    <div class="thumb">
+                                        <a href="/Blog/BlogDetails?id=@item.Id" title="@item.Name"><img src="@item.Image" alt="@item.Name" title="@item.Name"></a>
+                                    </div>
+                                    <div class="content">
+                                        <div class="inner-content">
+                                            <h4 class="title">
+                                                <a href="blog-details.html">رستوران و فست فود های سیار</a>
+                                            </h4>
+                                            <div class="meta">
+                                                <a class="post-date" title="@item.Name" href="/Blog/BlogDetails?id=@item.Id">تاریخ : @item.FormattedJDate</a>
+                                                <span>/</span>
+                                                <a class="post-author" title="@item.Name" href="/Blog/BlogDetails?id=@item.Id">توسط : ادمین</a>
+                                            </div>
+                                            @{
+                                                if (!string.IsNullOrEmpty(item.Body))
+                                                {
+                                                    var cleanText = Regex.Replace(item.Body, "<.*?>", String.Empty);
+                                                    if (cleanText.Length > 100)
+                                                    {
+                                                        <p>@Html.Raw(cleanText.Substring(100))</p>
+                                                    }
+                                                    else
+                                                    {
+                                                        <p>@Html.Raw(cleanText)</p>
+                                                    }
+
+                                                }
+                                            }
+                                            <a class="btn-blog" href="/Blog/BlogDetails?id=@item.Id">ادامه</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-area">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item">
+                                <h4 class="widget-title">درباره ما</h4>
+                                <div class="about-widget">
+                                    <p>
+                                        مجموعه آرکو به صورت گسترده در فعالیت های مربوط به حوزه ی تجهیزات آشپزخانه های صنعتی ,فست فود , رستوران و کافی شاپ مشغول به ارائه خدمات می باشد.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item widget-menu-item">
+                                <h4 class="widget-title">ساعت کاری </h4>
+                                <nav class="widget-menu-wrap">
+                                    <ul class="nav-menu nav">
+                                        <li><a href="#/">روزهای هفته: </a> 9:00 - 17:00</li>
+                                        <li><a href="#/">پنج شنبه: </a>9:00 - 13:00</li>
+                                        <li><a href="#/">جمعه: </a>تعطیل </li>
+                                        <li><a href="#/">آ درس</a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item">
+                                <h4 class="widget-title"> محصولات پرفروش </h4>
+                                <nav class="widget-menu-wrap">
+                                    <ul class="nav-menu nav">
+                                        <li><a href="#/">دوغ ساز</a></li>
+                                        <li><a href="#/">بستنی ساز</a></li>
+                                        <li><a href="#/">جمعه</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item">
+                                <h4 class="widget-title">تماس با ما</h4>
+                                <p class="mb-0"> دفتر: تهران - فلکه دوم صادقیه خیابان ولیعصر کوچه تقدیری</p>
+                                 <p class="mb-0"></p>
+                                <ul class="widget-contact-info">
+                                    <li class="info-phone">تلفن :<a href="tel://(021)44053112">(021) 44053112</a> </li>
+                                    <li class="info-phone">تلفن :<a href="tel://(021)44053112">(021) 44053112</a> </li>
+                                    <li class="info-phone">فکس :<a href="tel://(021)44059704">(021) 44059704</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="widget-copyright text-center">
+                                    <p>© 2022 <span></span>ساخته شده توسط <a target="_blank" href="">آرکو تجهیز</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="scroll-to-top"><span class="fa fa-angle-double-up"></span></div>
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-inner">
+                <div class="off-canvas-overlay"></div>
+                <div class="off-canvas-content">
+                    <div class="off-canvas-header">
+                        <div class="logo-area">
+                            <a href="/"><img src="~/Assets/img/logo.png" alt="Logo" /></a>
+                        </div>
+                        <div class="close-action">
+                            <button class="btn-close"><i class="fa fa-close"></i></button>
+                        </div>
+                    </div>
+                    <div class="off-canvas-item">
+                        <div class="res-mobile-menu menu-active-one">
+                        </div>
+                    </div>
+                    <div class="off-canvas-footer"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="~/Assets/js/modernizr.js"></script>
+    <script src="~/Assets/js/jquery-main.js"></script>
+    <script src="~/Assets/js/jquery-migrate.js"></script>
+    <script src="~/Assets/js/popper.min.js"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <script src="~/Assets/js/jquery.appear.js"></script>
+    <script src="~/Assets/js/swiper.min.js"></script>
+    <script src="~/Assets/js/fancybox.min.js"></script>
+    <script src="~/Assets/js/aos.min.js"></script>
+    <script src="~/Assets/js/jquery.slicknav.js"></script>
+    <script src="~/Assets/js/jquery.countdown.min.js"></script>
+    <script src="~/Assets/js/wow.min.js"></script>
+    <script src="~/Assets/js/jquery-zoom.min.js"></script>
+    <script src="~/Assets/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ICE.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0e8fe41f-37a9-4671-8752-ae415aaf7838}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath />
+    <RootNamespace>ICE.Database</RootNamespace>
+    <AssemblyName>ICE.Database</AssemblyName>
+    <ModelCollation>1065,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>VB</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultSchema>AZ</DefaultSchema>
+    <DefaultCollation>Persian_100_CI_AI</DefaultCollation>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseSandBox|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="AZ" />
+    <Folder Include="AZ\Programmability" />
+    <Folder Include="AZ\ReferenceData" />
+    <Folder Include="AZ\Schema" />
+    <Folder Include="AZ\Tables" />
+    <Folder Include="AZ\Programmability\Stored Procedures" />
+    <Folder Include="AZ\Programmability\Table-valued Functions" />
+    <Folder Include="AZ\Programmability\Triggers" />
+    <Folder Include="AZ\Programmability\Stored Procedures\IdentificationBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\PaymentBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\ContactUsBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\ComplaintBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\ApiBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\ApplicationBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\AdminBusiness" />
+    <Folder Include="AZ\Programmability\Views" />
+    <Folder Include="AZ\Programmability\Scalar-valued Functions" />
+    <Folder Include="AZ\Programmability\Stored Procedures\ContentBusiness" />
+    <Folder Include="AZ\Programmability\Stored Procedures\SmsBusiness" />
+    <Folder Include="AZ\User" />
+    <Folder Include="AZ\Login" />
+    <Folder Include="AZ\Programmability\Stored Procedures\ProductBusiness" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="AZ\Tables\Identification.sql" />
+    <Build Include="AZ\Schema\AZ.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\VerifyCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\VerifyShahkar.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentification.sql" />
+    <Build Include="AZ\Tables\ApplicationSetting.sql" />
+    <Build Include="AZ\Tables\Sms.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetPriceLists.sql" />
+    <Build Include="AZ\Tables\ContactUs.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContactUsBusiness\ContactUsIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetUserCreditDetail.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetUserCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayIdentificationByCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\AccountingIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\VerifyIndividual.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetVerificationLink.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetUserWaitingPersonConfirmation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetUserConfirmed.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationReportTypeIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationAvailabilityCheck.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationReportTypes.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentifications.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationState.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetUserSeenCreditReport.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ExpireIdentification.sql" />
+    <Build Include="AZ\Tables\Complaint.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ComplaintBusiness\ComplaintIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\CheckIndividualReportExistenceIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\CheckIndividualReportExistenceUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationInsApi.sql" />
+    <Build Include="AZ\Tables\ApiErrorCode.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\GetSMSProviderSetting.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\CheckKycIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\CheckKycUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\GetSetting.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetReportLinkAndExpirationDate.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetTrackingCode.sql" />
+    <None Include="AZ\ReferenceData\PlaceData.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\OnlinePaymentLogIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReceivedPayIdentification.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CancelPayIdentification.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CompletePayIdentification.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayIdentification.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetOnlinePaymentSetting.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetOnlinePaymentAppByOnlinePaymentID.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationSendToOthersIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationVerified.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationSendToOthers.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ResendVerificationCode.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetReportDateWithTrackingCode.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\Backup_ICE.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationLinkAndExpirationDateFirmPanel.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationReadyForSee.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetAllIdentificationStates.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CreateCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_OnlinePaymentConfirmationIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_OnlinePaymentConfirmation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_OnlinePaymentConfirmationCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_Complaints.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_ContactUs.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\GetSettings.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_GetFirmRegistration.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Rpt_GetRequestRegistration.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Rpt_GetIndividualFirmRequestRegistration.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetTransferFileSheba.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Rpt_GetIndividualFirmRegistration.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Rpt_GetPayFromCredit.sql" />
+    <Build Include="AZ\Tables\PagesType.sql" />
+    <Build Include="AZ\Tables\Pages.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetPages.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PagesUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PagesDel.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetIndividualContentPage.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PagesIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_UpdRequestRegistration.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ClearIdentificationInvoice.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\Background_CreateIdentificationInvoiceBatch.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ClearIdentificationInvoiceWithBatch.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetReportPriceShareTracking.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetPage.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetPages.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\GetICSReportSources.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_PartnerPaymentConfirmation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PresenterIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_GetTransferFileShebaTotal.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ResendVerificationCodeSecondCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\VerifySecondCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\VerifyShahkarSecondCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PresenterUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PresenterDel.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetPresenters.sql" />
+    <Build Include="AZ\Tables\Menu.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_UpdFirmRegistration.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Rpt_PayReportByCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\Background_ChangeIdentificationState.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\GetTransferFileShebaDocumentNo.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_GetPayFromCreditUsers.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\GetCallProviderSetting.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesImageDel.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesImageIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesImageUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ResendVerificationCodeReceiverCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\VerifyReceiverCellPhone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationUserPaymentTypeIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationNotPaid.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetApplicationSetting.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_ApplicationSettingUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetIndividualContactUs.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_ContactUsUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetIndividualComplaint.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_ComplaintUpd.sql" />
+    <Build Include="AZ\Tables\SMSType.sql" />
+    <Build Include="AZ\Tables\SMSLog.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SmsBusiness\SmsLogIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SmsBusiness\GetSmsLogs.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetPartners.sql" />
+    <Build Include="AZ\Tables\SMSLogState.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetUserWebhook.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetApi.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetPartnerApi.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetReportPriceShare.sql" />
+    <Build Include="AZ\Tables\SMSLogType.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\AddSendSmsTryCount.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SmsBusiness\SmsLogStateUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SmsBusiness\GetReportHasBeenSent.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PartnerApiIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_PartnerWebhookIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\CheckFirmReportExistenceIns.sql" />
+    <Build Include="AZ\Tables\CheckFirmReportExistence.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApiBusiness\CheckFirmReportExistenceUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ReportExpirationDateUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_GetTopic.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\CancelIdentifiction.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetFrontPageCount.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationICS24.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationStateUpdICS24.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationsICS24.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetMostRepairedIdentifications.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetMostSendSMSPeygiriIdentification.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationsPartnerSubmit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationSentRepairMessage.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\SetSetting.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\RollbackPayIdentification.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\ApplicationDel.sql" />
+    <Build Include="AZ\User\AZ.sql" />
+    <Build Include="AZ\Login\AZ.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationReportLinkUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationICS24Confirmed.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationAppICS24HashCode.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReturnIdentificationCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Rpt_PayReportByCreditGetUsers.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\rpt_OnlinePaymentConfirmationCreditGetUsers.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationHasShahkarIdentified.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationIsLegalPerson.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\SetIdentificationOtpLock.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetPriceListsFirm.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\GetIrancelReport.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetBankportalList.sql" />
+    <Build Include="AZ\Programmability\Table-valued Functions\JSubMonth.sql" />
+    <Build Include="AZ\Programmability\Scalar-valued Functions\JAddMonth.sql" />
+    <Build Include="AZ\Programmability\Scalar-valued Functions\JDayTab.sql" />
+    <Build Include="AZ\Programmability\Scalar-valued Functions\Jleap.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetOnlinePayment.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetUserLastSevenDaysSeen.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetUserLastSevenHours.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetUserRejected.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\PROC_JAddMonth.sql" />
+    <Build Include="AZ\Programmability\Table-valued Functions\SplitString.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetFAQs.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\ExpirationDateUpd.sql" />
+    <Build Include="AZ\Tables\FAQ.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\GetDatabaseServerTime.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ApplicationBusiness\SearchAllObjects.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CompletePayIdentificationIsPaidByInvitations.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetCreditDetails.sql" />
+    <Build Include="AZ\Tables\PagesComment.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesCommentIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\AdminBusiness\Admin_ReportPriceShareUpd.sql" />
+    <Build Include="AZ\Tables\PagesRate.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesRateIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetTotalPageRates.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationRateUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetPagesComment.sql" />
+    <Build Include="AZ\Tables\ApprovalState.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesCommentApprovalStateUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\GetPagesComments.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\IdentificationSetStatePayed_1.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayIdentityInformation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReceivedPayIdentityInformation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CompletePayIdentityInformation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CancelPayIdentityInformation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetPriceListsIdentityInformation.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationReportIsCorrupted.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\IdentificationBusiness\GetIdentificationSimple.sql" />
+    <None Include="AZ\ReferenceData\GroupOfPersonsStateData.sql" />
+    <None Include="AZ\ReferenceData\GroupOfPersonsTypeData.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetPriceListsGroupOfPersons.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayGroupOfPersons.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CancelPayGroupOfPersons.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CompletePayGroupOfPersons.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReceivedPayGroupOfPersons.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReturnGroupOfPersonsCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayGroupOfPersonsByCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CancelPayJaam.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CompletePayJaam.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetPriceListsJaam.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayJaam.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReceivedPayJaam.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayJaamByCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReturnJaamCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\GetPriceListsCompanyPerson.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayCompanyPerson.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReceivedPayCompanyPerson.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CompletePayCompanyPerson.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\CancelPayCompanyPerson.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\PayCompanyPersonByCredit.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\PaymentBusiness\ReturnCompanyPersonCredit.sql" />
+    <Build Include="AZ\Tables\Product.sql" />
+    <Build Include="AZ\Tables\ProductProperty.sql" />
+    <Build Include="AZ\Tables\Property.sql" />
+    <Build Include="AZ\Tables\Category.sql" />
+    <Build Include="AZ\Tables\Gallery.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\GetProducts.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\ProductIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\CategoryIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\GetCategories.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\PropertyIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\GetProperties.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\GetCategory.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\GetProduct.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\PagesIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\DeleteProducts.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\DeleteCategory.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ContentBusiness\DeletePage.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\ProductUPD.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\ProductBusiness\PropertyDelete.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AZ\ReferenceData\ApplicationSettingData.sql" />
+    <None Include="AZ\ReferenceData\BankData.sql" />
+    <None Include="ICE_TestSchemaCompare.scmp" />
+    <None Include="AZ\ReferenceData\PriceListData.sql" />
+    <None Include="AZ\ReferenceData\AccountingTypeData.sql" />
+    <None Include="AZ\ReferenceData\PriceListTypeData.sql" />
+    <None Include="AZ\ReferenceData\IdentificationStateData.sql" />
+    <None Include="AZ\ReferenceData\IdentificationTypeData.sql" />
+    <None Include="AZ\ReferenceData\ReportTypeData.sql" />
+    <None Include="AZ\ReferenceData\ReportSourceDate.sql" />
+    <None Include="AZ\ReferenceData\ApiErrorCodeData.sql" />
+    <None Include="AZ\ReferenceData\ReportPriceShareData.sql" />
+    <None Include="ICE_SchemaCompare.scmp" />
+    <None Include="AZ\ReferenceData\PlaceData.sql" />
+    <None Include="AZ\ReferenceData\PortalPaymentTypeData.sql" />
+    <None Include="AZ\ReferenceData\BankPortalData.sql" />
+    <None Include="AZ\ReferenceData\IdentificationSendToOthersTypeData.sql" />
+    <None Include="AZ\ReferenceData\IdentificationInvoiceStateData.sql" />
+    <None Include="AZ\ReferenceData\LocationTypeData.sql" />
+    <None Include="AZ\ReferenceData\FirmRegistrationStateData.sql" />
+    <None Include="AZ\ReferenceData\RequestRegistrationStateData.sql" />
+    <None Include="AZ\ReferenceData\RequestRegistrationFileTypeData.sql" />
+    <None Include="AZ\ReferenceData\PagesTypeData.sql" />
+    <None Include="AZ\ReferenceData\ICSReportSourceTypeData.sql" />
+    <None Include="AZ\ReferenceData\ICSReportSourceData.sql" />
+    <None Include="AZ\ReferenceData\SMSTypeData.sql" />
+    <None Include="AZ\ReferenceData\SMSLogStateData.sql" />
+    <None Include="AZ\ReferenceData\SMSLogType.sql" />
+    <None Include="AZ\ReferenceData\IdentificationComplaintCategoryData.sql" />
+    <None Include="AZ\ReferenceData\IdentificationComplaintStateData.sql" />
+    <None Include="AZ\ReferenceData\ControlTypeData.sql" />
+    <None Include="AZ\ReferenceData\RequestRegistrationTypeData.sql" />
+    <None Include="AZ\ReferenceData\IdentityInformationData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ICE.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="AZ\ReferenceData\PostDeployScript.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ICEUserManagement\ICEUserManagement.sqlproj">
+      <Name>ICEUserManagement</Name>
+      <Project>{a4ec8424-2489-4c79-8dc7-8957c827a6a9}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>ICEUserManagement</DatabaseSqlCmdVariable>
+    </ProjectReference>
+    <ProjectReference Include="..\JalaliDateTime\JalaliDateTime.vbproj">
+      <Name>JalaliDateTime</Name>
+      <Project>{8556fc7a-60ea-4dec-ac4f-074a2176554b}</Project>
+      <Private>True</Private>
+      <IsModelAware>True</IsModelAware>
+      <GenerateSqlClrDdl>True</GenerateSqlClrDdl>
+    </ProjectReference>
+    <ProjectReference Include="..\ICECore.Database\ICECore.Database.sqlproj">
+      <Name>ICECore.Database</Name>
+      <Project>{a68d0798-d66a-478d-950f-298f17e2130f}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>ICECore</DatabaseSqlCmdVariable>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="ICECore">
+      <DefaultValue>ICECore</DefaultValue>
+      <Value>$(SqlCmdVar__4)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="ICEUserManagement">
+      <DefaultValue>ICEUserManagement</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="JalaliDateTime">
+      <DefaultValue>JalaliDateTime</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+</Project>

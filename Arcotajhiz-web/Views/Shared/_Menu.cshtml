@@ -1,0 +1,107 @@
+﻿@{
+    var objMenus = (List<ARCO.Entities.CategoryEntity>)ViewBag.Menus;
+    var parentMenus = objMenus.Where(x => x.parentID == Guid.Empty).ToList();
+    var xst = "test";
+}
+<header class="header-area header-default sticky-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-5 col-sm-3 col-md-3 col-lg-2 pr-0">
+                <div class="header-logo-area">
+                    <a href="/">
+                        <img class="logo-main" src="~/Assets/img/logo.png" alt="Logo" />
+                        <img class="logo-light" src="~/Assets/img/logo.png" alt="Logo" />
+                    </a>
+                </div>
+            </div>
+            @*@{
+                    @ViewBag.Menus[0].name
+                }*@
+            <div class="col-7 col-sm-9 col-md-9 col-lg-10">
+                <div class="header-align">
+                    <div class="header-navigation-area">
+                        <ul class="main-menu nav justify-content-center">
+
+                            <li class="active">
+                                @Html.ActionLink("خانه", "Index", "Home")
+
+                            </li>
+
+                            <li class="has-submenu full-width">
+                                @Html.ActionLink("محصولات", "Index", "Product")
+
+                                <ul class="submenu-nav submenu-nav-mega">
+                                    @{
+                                        foreach (ARCO.Entities.CategoryEntity item in parentMenus)
+                                        {
+
+                                            <li class="mega-menu-item">
+                                                <a class="srmenu-title" href="@item.Link">@item.name</a>
+                                                <ul>
+                                                    @{ foreach (ARCO.Entities.CategoryEntity innerItem in objMenus.Where(x => x.parentID == item.id).ToList())
+                                                        {
+                                                            <li><a href="@innerItem.Link">@innerItem.name</a></li>
+                                                        }}
+
+                                                    @*<li><a href="shop-4-grid.html">Shop 4 Column</a></li>
+                                                        <li><a href="shop.html">Shop Left Sidebar</a></li>
+                                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                                        <li><a href="shop-list.html">Shop Listing View</a></li>
+                                                        <li><a href="shop-list-left-sidebar.html">Shop List left Sidebar</a></li>
+                                                        <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>*@
+                                                </ul>
+                                            </li>
+
+                                        }
+                                    }
+
+                                </ul>
+                            </li>
+                            @*<li class="has-submenu full-width colunm-two position-static">
+                                    @Html.ActionLink("پروژ ها", "Index", "Projects")
+
+                                    <ul class="submenu-nav submenu-nav-mega">
+                                        <li class="mega-menu-item">
+                                            <a class="srmenu-title" href="#">ارگان ها و سازمان ها </a>
+                                            <ul>
+                                                <li><a href="shop-single-product-title1.html">Fish spatula</a></li>
+                                                <li><a href="shop-single-product-title1.html">Pasta fork</a></li>
+                                                <li><a href="shop-single-product-title1.html">Bulb baster</a></li>
+                                                <li><a href="shop-single-product-title1.html">Food mill</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="mega-menu-item">
+                                            <a class="srmenu-title" href="#">رستوران ، هتل ، کافه ، کترینگ عمومی</a>
+                                            <ul>
+                                                <li><a href="shop-single-product-title1.html">Apple corer</a></li>
+                                                <li><a href="shop-single-product-title1.html">Vegetable peeler</a></li>
+                                                <li><a href="shop-single-product-title1.html">Garlic press</a></li>
+                                                <li><a href="shop-single-product-title1.html">Pizza cutter</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>*@
+                            <li>@Html.ActionLink("پروژه ها", "Index", "projects")</li>
+                            <li>@Html.ActionLink("بلاگ", "Index", "blog")</li>
+                            <li> @Html.ActionLink("درباره ما", "Index", "AboutUs")</li>
+                            <li>  @Html.ActionLink("ارتباط با ما", "Index", "contactUs")</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="header-action-area">
+
+
+
+                        <button class="btn-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,22 @@
+﻿CREATE PROCEDURE [AZ].[SetIdentificationAvailabilityCheck](
+	@IdentificationVCode BIGINT,
+	@AvailabilityCheck BIT
+)
+AS
+BEGIN
+	BEGIN TRAN
+	BEGIN TRY
+		UPDATE AZ.[Identification] SET AvailabilityCheck = @AvailabilityCheck,LastModifiedDate = GETDATE()--,IdentificationStateVCode = 9 
+		WHERE VCode = @IdentificationVCode
+
+		--INSERT AZ.IdentificationHistory(IdentificationVCode,IdentificationStateVCode) VALUES(@IdentificationVCode,9)
+
+		COMMIT TRAN
+	END TRY
+		BEGIN CATCH
+		DECLARE @ErrNo INT,@ErrMsg NVARCHAR(4000),@ErrSev INT,@ErrStt INT
+		SELECT @ErrMsg = '(' + CONVERT(NVARCHAR(4000),ERROR_NUMBER()) + ') ' + ERROR_MESSAGE(),@ErrSev = ERROR_SEVERITY(),@ErrStt = ERROR_STATE()
+		IF @@TRANCOUNT > 0 ROLLBACK TRAN
+		RAISERROR(@ErrMsg,@ErrSev,@ErrStt)
+	END CATCH
+END

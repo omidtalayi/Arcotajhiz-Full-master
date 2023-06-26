@@ -1,0 +1,10 @@
+﻿CREATE PROCEDURE [AZ].[rpt_Complaints](
+	@FromDate DATE = NULL,
+	@ToDate DATE = NULL
+)
+AS
+BEGIN
+	SELECT * FROM AZ.Complaint (NOLOCK) C
+	WHERE CAST(C.EntryDate AS DATE) BETWEEN ISNULL(@FromDate,CAST(C.EntryDate AS DATE)) AND ISNULL(@ToDate,CAST(C.EntryDate AS DATE))
+	ORDER BY C.VCode DESC
+END

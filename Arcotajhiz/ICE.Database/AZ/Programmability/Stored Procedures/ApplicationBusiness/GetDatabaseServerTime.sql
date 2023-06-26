@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE [AZ].[GetDatabaseServerTime]
+AS
+BEGIN
+	SELECT GETDATE()
+END

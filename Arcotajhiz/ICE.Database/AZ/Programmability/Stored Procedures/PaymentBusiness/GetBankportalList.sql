@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE AZ.GetBankportalList
+AS
+BEGIN
+	SELECT * FROM AZ.BankPortal
+END
+GO

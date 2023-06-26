@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ICEUserManagement</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a4ec8424-2489-4c79-8dc7-8957c827a6a9}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ICEUserManagement</RootNamespace>
+    <AssemblyName>ICEUserManagement</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseSandBox|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="AZ" />
+    <Folder Include="AZ\Programmability" />
+    <Folder Include="AZ\ReferenceData" />
+    <Folder Include="AZ\Schema" />
+    <Folder Include="AZ\Tables" />
+    <Folder Include="AZ\Programmability\Scalar-valued Functions" />
+    <Folder Include="AZ\Programmability\Stored Procedures" />
+    <Folder Include="AZ\Programmability\Table-valued Functions" />
+    <Folder Include="AZ\Programmability\Triggers" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="AZ\Schema\AZ.sql" />
+    <Build Include="AZ\Tables\User.sql" />
+    <Build Include="AZ\Tables\UserHistory.sql" />
+    <Build Include="AZ\Tables\UserHistoryType.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UserIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetUser.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\LoginFailed.sql" />
+    <Build Include="AZ\Tables\Application.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UnlockUser.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\LoginSuccessful.sql" />
+    <Build Include="AZ\Tables\UserToken.sql" />
+    <Build Include="AZ\Tables\DeviceType.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UserTokenIns.sql" />
+    <Build Include="AZ\Tables\UserType.sql" />
+    <Build Include="AZ\Tables\UserIP.sql" />
+    <Build Include="AZ\Tables\Api.sql" />
+    <Build Include="AZ\Tables\UserApi.sql" />
+    <None Include="AZ\ReferenceData\ApiData.sql" />
+    <Build Include="AZ\Tables\UserWebHook.sql" />
+    <Build Include="AZ\Tables\WebHookType.sql" />
+    <Build Include="AZ\Tables\UserWebHookCall.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UserWebHookCallIns.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\Backup_ICEUserManagement.sql" />
+    <Build Include="AZ\Tables\UserPaymentType.sql" />
+    <Build Include="AZ\Tables\SubSystem.sql" />
+    <Build Include="AZ\Tables\UserSubSystem.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SetPassword.sql" />
+    <Build Include="AZ\Tables\Role.sql" />
+    <Build Include="AZ\Tables\UserRole.sql" />
+    <None Include="AZ\ReferenceData\RoleData.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\Admin_GetUser.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UserUpd.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetUserVCodeByCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetUserVCodeByEmail.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetPartners.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetResetPasswordCountByCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetResetPasswordCountByEmail.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\Background_ResetPasswordCount.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetTrackingUsers.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SetUserName.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\Admin_GetPartners.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UpdateUserApis.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UpdateUserWebhook.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetUserVerificationCode.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\UserInsSandbox.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\VerifyCellphone.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\SearchAllObjects.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\GetUserSandbox.sql" />
+    <Build Include="AZ\Programmability\Stored Procedures\VisitLogIns.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AZ\ReferenceData\UserHistoryTypeData.sql" />
+    <None Include="ICEUserManagement_TestSchemaCompare.scmp" />
+    <None Include="AZ\ReferenceData\DeviceTypeData.sql" />
+    <None Include="AZ\ReferenceData\UserTypeData.sql" />
+    <None Include="ICEUserManagement_SchemaCompare.scmp" />
+    <None Include="AZ\ReferenceData\WebHookTypeData.sql" />
+    <None Include="AZ\ReferenceData\UserPaymentTypeData.sql" />
+    <None Include="AZ\ReferenceData\SubSystemData.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+
+
+<!-- Mirrored from htmldemo.net/alan/alan/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 15:10:33 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>آرکو تجهیز | @ViewBag.Title</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="~/Assets/img/favicon.ico" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,400i,500,600,700" rel="stylesheet">
+
+    <!--== Bootstrap CSS ==-->
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--== Themify Icons CSS ==-->
+    <link href="~/Assets/css/themify-icons.css" rel="stylesheet" />
+    <!--== Font-awesome Icons CSS ==-->
+    <link href="~/Assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--== Ionicons CSS ==-->
+    <link href="~/Assets/css/ionicons.min.css" rel="stylesheet" />
+    <!--== Animate CSS ==-->
+    <link href="~/Assets/css/animate.css" rel="stylesheet" />
+    <!--== Aos CSS ==-->
+    <link href="~/Assets/css/aos.css" rel="stylesheet" />
+    <!--== FancyBox CSS ==-->
+    <link href="~/Assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <!--== Slicknav CSS ==-->
+    <link href="~/Assets/css/slicknav.css" rel="stylesheet" />
+    <!--== Swiper CSS ==-->
+    <link href="~/Assets/css/swiper.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!--wrapper start-->
+    <div class="wrapper home-default-wrapper">
+
+        <!--== Start Preloader Content ==-->
+        <div class="preloader-wrap">
+            <div class="preloader">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--== End Preloader Content ==-->
+        <!--== Start Header Wrapper ==-->
+        @Html.Partial("_Menu")
+        <!--== End Header Wrapper ==-->
+
+        @RenderBody()
+        <!--== Start Footer Area Wrapper ==-->
+        <footer class="footer-area">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item">
+                                <h4 class="widget-title">درباره ما</h4>
+                                <div class="about-widget">
+                                    <p>
+                                        مجموعه آرکو به صورت گسترده در فعالیت های مربوط به حوزه ی تجهیزات آشپزخانه های صنعتی ,فست فود , رستوران و کافی شاپ مشغول به ارائه خدمات می باشد.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item widget-menu-item">
+                                <h4 class="widget-title">ساعت کاری </h4>
+                                <nav class="widget-menu-wrap">
+                                    <ul class="nav-menu nav">
+                                        <li><a href="#/">روزهای هفته: </a> 9:00 - 17:00</li>
+                                        <li><a href="#/">پنج شنبه: </a>9:00 - 13:00</li>
+                                        <li><a href="#/">جمعه: </a>تعطیل </li>
+                                        <li><a href="#/">آ درس</a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item">
+                                <h4 class="widget-title"> محصولات پرفروش </h4>
+                                <nav class="widget-menu-wrap">
+                                    <ul class="nav-menu nav">
+                                        <li><a href="#/">دوغ ساز</a></li>
+                                        <li><a href="#/">بستنی ساز</a></li>
+                                        <li><a href="#/">اجاق گاز</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget-item">
+                                <h4 class="widget-title">تماس با ما</h4>
+                                <p class="mb-0"> دفتر: تهران - فلکه دوم صادقیه خیابان ولیعصر کوچه تقدیری</p>
+
+                                <p class="mb-0"></p>
+                                <ul class="widget-contact-info">
+                                    <li class="info-phone">تلفن :<a href="tel://(021)44053112">(021) 44053112</a> </li>
+                                    <li class="info-phone">تلفن :<a href="tel://(021)44053112">(021) 44053112</a> </li>
+                                    <li class="info-phone">فکس :<a href="tel://(021)44059704">(021) 44059704</a> </li>
+                                    <!-- <li class="info-mail"><a href="mailto://example@admin.com">example@admin.com</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="widget-copyright text-center">
+                                    <p>© 2022 <span></span>ساخته شده توسط <a target="_blank" href="">آرکو تجهیز</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--== End Footer Area Wrapper ==-->
+        <!--== Scroll Top Button ==-->
+        <div class="scroll-to-top"><span class="fa fa-angle-double-up"></span></div>
+
+        <!--== Start Quick View Menu ==-->
+        <aside class="product-quick-view-modal">
+            <div class="product-quick-view-inner">
+                <div class="product-quick-view-content">
+                    <button type="button" class="btn-close">
+                        <span class="close-icon"><i class="ti-close"></i></span>
+                    </button>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="thumb">
+                                <img src="~/Assets/img/shop/quick-view1.png" alt="Alan-Shop">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="content">
+                                <h4 class="title">1. New and sale badge product</h4>
+                                <div class="prices">
+                                    <del class="price-old">$167.540</del>
+                                    <span class="price">$141.76</span>
+                                </div>
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>
+                                <div class="quick-view-select">
+                                    <div class="quick-view-select-item">
+                                        <label for="forSize" class="form-label">Size:</label>
+                                        <select class="form-select" id="forSize" required>
+                                            <option selected value="">s</option>
+                                            <option>m</option>
+                                            <option>l</option>
+                                            <option>xl</option>
+                                        </select>
+                                    </div>
+                                    <div class="quick-view-select-item">
+                                        <label for="forColor" class="form-label">Color:</label>
+                                        <select class="form-select" id="forColor" required>
+                                            <option selected value="">red</option>
+                                            <option>green</option>
+                                            <option>blue</option>
+                                            <option>yellow</option>
+                                            <option>white</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="action-top">
+                                    <div class="pro-qty">
+                                        <input type="text" id="quantity2" title="Quantity" value="1" />
+                                    </div>
+                                    <button class="btn btn-black">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-overlay"></div>
+        </aside>
+        <!--== End Quick View Menu ==-->
+        <!--== Start Side Menu ==-->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-inner">
+                <div class="off-canvas-overlay"></div>
+                <!-- Start Off Canvas Content Wrapper -->
+                <div class="off-canvas-content">
+                    <!-- Off Canvas Header -->
+                    <div class="off-canvas-header">
+                        <div class="logo-area">
+                            <a href="/"><img src="~/Assets/img/logo.png" alt="Logo" /></a>
+                        </div>
+                        <div class="close-action">
+                            <button class="btn-close"><i class="fa fa-close"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="off-canvas-item">
+                        <!-- Start Mobile Menu Wrapper -->
+                        <div class="res-mobile-menu menu-active-one">
+                            <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                        </div>
+                        <!-- End Mobile Menu Wrapper -->
+                    </div>
+                    <!-- Off Canvas Footer -->
+                    <div class="off-canvas-footer"></div>
+                </div>
+                <!-- End Off Canvas Content Wrapper -->
+            </div>
+        </aside>
+        <!--== End Side Menu ==-->
+    </div>
+
+    <!--=======================Javascript============================-->
+    <!--=== Modernizr Min Js ===-->
+    <script src="~/Assets/js/modernizr.js"></script>
+
+    <!--=== jQuery Min Js ===-->
+    <script src="~/Assets/js/jquery-main.js"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="~/Assets/js/jquery-migrate.js"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="~/Assets/js/popper.min.js"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <!--=== jquery Appear Js ===-->
+    <script src="~/Assets/js/jquery.appear.js"></script>
+    <!--=== jquery Swiper Min Js ===-->
+    <script src="~/Assets/js/swiper.min.js"></script>
+    <!--=== jquery Fancybox Min Js ===-->
+    <script src="~/Assets/js/fancybox.min.js"></script>
+    <!--=== jquery Aos Min Js ===-->
+    <script src="~/Assets/js/aos.min.js"></script>
+    <!--=== jquery Slicknav Js ===-->
+    <script src="~/Assets/js/jquery.slicknav.js"></script>
+    <!--=== jquery Countdown Js ===-->
+    <script src="~/Assets/js/jquery.countdown.min.js"></script>
+    <!--=== jquery Wow Min Js ===-->
+    <script src="~/Assets/js/wow.min.js"></script>
+    <!--=== jQuery Zoom Min Js ===-->
+    <script src="~/Assets/js/jquery-zoom.min.js"></script>
+
+    <!--=== Custom Js ===-->
+    <script src="~/Assets/js/custom.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+
+
+<!-- Mirrored from htmldemo.net/alan/alan/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Nov 2022 15:09:45 GMT -->
+</html>

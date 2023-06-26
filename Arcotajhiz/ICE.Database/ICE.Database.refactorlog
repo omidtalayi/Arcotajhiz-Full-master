@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0fab457a-ed19-4cc0-a375-43df410f7640" ChangeDateTime="02/13/2019 13:04:41">
+    <Property Name="ElementName" Value="[AZ].[CheckIndividualReportExistenceReportSource].[ICSShare]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[CheckIndividualReportExistenceReportSource]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SourceShare" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1845842e-b72a-4930-b157-495c5069c129" ChangeDateTime="04/14/2019 06:36:33">
+    <Property Name="ElementName" Value="[AZ].[RequestRegistration].[[Description]]]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[RequestRegistration]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="433efba0-f77f-4dfd-bc1b-d91d24157410" ChangeDateTime="04/15/2019 11:52:51">
+    <Property Name="ElementName" Value="[AZ].[PagesType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[PagesType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cc7853cf-05d6-4f03-8b4c-cc39d82139da" ChangeDateTime="07/16/2019 11:59:42">
+    <Property Name="ElementName" Value="[AZ].[SMSType].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[SMSType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e042500c-e050-4158-83ad-d594fefc66f4" ChangeDateTime="01/03/2023 18:24:54">
+    <Property Name="ElementName" Value="[AZ].[Product].[ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3da91c4a-9f49-4280-9990-c37c31566f7c" ChangeDateTime="01/03/2023 18:24:57">
+    <Property Name="ElementName" Value="[AZ].[Product].[Title]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f044341d-d28e-40da-9124-e040455c6cd8" ChangeDateTime="01/03/2023 19:37:08">
+    <Property Name="ElementName" Value="[AZ].[Category].[value]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Category]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0875d079-b3d5-4a1e-aba0-cae17436cb11" ChangeDateTime="01/03/2023 19:37:15">
+    <Property Name="ElementName" Value="[AZ].[Category].[productID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Category]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="image" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="21c4a45a-80fa-44fa-9b4f-128c9cbf4c9a" ChangeDateTime="01/03/2023 19:37:46">
+    <Property Name="ElementName" Value="[AZ].[Category].[propertyID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Category]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="parentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f031cea1-224d-4940-b1f2-e683c3321ab8" ChangeDateTime="01/25/2023 16:03:51">
+    <Property Name="ElementName" Value="[AZ].[Pages].[VCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2a413601-2395-4158-a9ab-5c5c9ad15949" ChangeDateTime="02/02/2023 16:10:14">
+    <Property Name="ElementName" Value="[AZ].[Property].[isEneabled]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Property]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="isEnabled" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4b580ab6-a60f-40eb-ad58-36abf6cbcc17" ChangeDateTime="03/17/2023 12:20:03">
+    <Property Name="ElementName" Value="[AZ].[PagesComment].[VCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[PagesComment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1e51c1c5-40b7-48e8-ae30-30223c7518c1" ChangeDateTime="03/17/2023 12:43:42">
+    <Property Name="ElementName" Value="[AZ].[PagesType].[VCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[PagesType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="db2bfcfb-28d8-4e62-bbef-dc2056be7de1" ChangeDateTime="03/17/2023 12:44:10">
+    <Property Name="ElementName" Value="[AZ].[Pages].[PagesTypeVCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PagesTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="afd89057-a472-40d6-9973-177a3c6effba" ChangeDateTime="03/17/2023 13:13:51">
+    <Property Name="ElementName" Value="[AZ].[Pages].[ImagePath]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[AZ].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Image" />
+  </Operation>
+</Operations>

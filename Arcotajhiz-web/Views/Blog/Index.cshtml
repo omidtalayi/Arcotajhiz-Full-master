@@ -1,0 +1,129 @@
+﻿@using ARCO.Entities.Models;
+@using System.Text.RegularExpressions
+@{
+    ViewBag.Title = "وبلاگ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<PagesEntity> items = ViewBag.items;
+}
+
+
+
+<main class="main-content site-wrapper-reveal">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area" data-bg-img="../assets/img/photos/bg-page-title.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-title-content text-center">
+                        <h2 class="title text-white">بلاگ</h2>
+                        <div class="bread-crumbs"><a href="index.html">خانه<span class="breadcrumb-sep">/</span></a><span class="active">بلاگ</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Page Title Area ==-->
+    <!--== Start Blog Area Wrapper ==-->
+    <section class="blog-grid-area">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-9">
+                    <div class="blog-content-area post-items-style2">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-12">
+                                <!--== Start Blog Post Item ==-->
+                                @{
+                                    foreach (var item in items)
+                                    {
+                                        <div class="post-item">
+                                            <div class="thumb">
+                                                <a href="/Blog/BlogDetails?id=@item.Id"><img src="@item.Image" title="@item.Name" alt="@item.Name"></a>
+                                            </div>
+                                            <div class="content">
+                                                <div class="inner-content">
+                                                    <h4 class="title">
+                                                        <a href="/Blog/BlogDetails?id=@item.Id">@item.Name</a>
+                                                    </h4>
+                                                    <div class="meta">
+                                                        <a class="post-date" href="/">@item.FormattedJDate</a>
+                                                        <span>/</span>
+                                                        <a class="post-author" href="/">آرکو تجهیز</a>
+                                                    </div>
+                                                    @{
+                                                        if (!string.IsNullOrEmpty(item.Body))
+                                                        {
+                                                            var cleanText = Regex.Replace(item.Body, "<.*?>", String.Empty);
+                                                            if (cleanText.Length > 200)
+                                                            {
+                                                                <p>@Html.Raw(cleanText.Substring(200))</p>
+                                                            }
+                                                            else
+                                                            {
+                                                                <p>@Html.Raw(cleanText)</p>
+                                                            }
+
+                                                                                }
+                                                                            }
+                                                    <a class="btn-blog" href="/Blog/BlogDetails?id=@item.Id">ادامه</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                                                }
+
+                                <!--== End Blog Post Item ==-->
+                            </div>
+
+                        </div>
+                        @*<div class="pagination-area">
+                            <nav>
+                                <ul class="page-numbers">
+                                    <li>
+                                        <a class="page-number disabled next" href="blog.html">
+                                            <i class="ion-ios-arrow-right"></i>
+                                            قبلی
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number active" href="blog.html">1</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number" href="blog.html">2</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number" href="blog.html">3</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-number next" href="blog.html">
+
+                                            بعدی
+                                            <i class="ion-ios-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="total-pages">
+                                <p>نمایش 1 - 4 از 11 نتیجه</p>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar-area mt-md-70">
+                        <div class="widget mb-0 pb-3">
+                            <h3 class="widget-title">مارا در دنبال کنید</h3>
+                            <div class="widget-socials">
+                                <a href="#/"><i class="fa fa-facebook"></i></a>
+                                <a href="#/"><i class="fa fa-twitter"></i></a>
+                                <a href="#/"><i class="fa fa-instagram"></i></a>
+                                <a href="#/"><i class="fa fa-skype"></i></a>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Blog Area Wrapper ==-->
+</main>

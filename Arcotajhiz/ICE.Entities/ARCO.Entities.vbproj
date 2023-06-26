@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCDB05CE-3EDE-49E6-B8EB-ABE175399FEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ARCO.Entities</RootNamespace>
+    <AssemblyName>ARCO.Entities</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ARCO.Entities.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ARCO.Entities.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseSandBox|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ReleaseSandBox\</OutputPath>
+    <DocumentationFile>ARCO.Entities.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dto\GalleryDto.vb" />
+    <Compile Include="Dto\LoginDto.vb" />
+    <Compile Include="Dto\ProductDto.vb" />
+    <Compile Include="Dto\ProductPropertyDto.vb" />
+    <Compile Include="Dto\RegisterDto.vb" />
+    <Compile Include="Dto\RolesDto.vb" />
+    <Compile Include="Entities\CategoryEntity.vb" />
+    <Compile Include="Entities\GalleryEntity.vb" />
+    <Compile Include="Entities\PagesCommentEntity.vb" />
+    <Compile Include="Entities\PagesEntity.vb" />
+    <Compile Include="Entities\ProductEntity.vb" />
+    <Compile Include="Entities\ProductPropertyEntity.vb" />
+    <Compile Include="Entities\ProjectEntity.vb" />
+    <Compile Include="Entities\PropertyEntity.vb" />
+    <Compile Include="Entities\RoleEntity.vb" />
+    <Compile Include="Entities\UserEntity.vb" />
+    <Compile Include="Enums\AccountingTypeEnum.vb" />
+    <Compile Include="Enums\AddressTypeEnum.vb" />
+    <Compile Include="Enums\ApiEnum.vb" />
+    <Compile Include="Enums\ApiErrorCodeEnum.vb" />
+    <Compile Include="Enums\ApplicationTypeEnum.vb" />
+    <Compile Include="Enums\ApprovalStateEnum.vb" />
+    <Compile Include="Enums\BankBailTypeEnum.vb" />
+    <Compile Include="Enums\BankEnum.vb" />
+    <Compile Include="Enums\BankPortalEnum.vb" />
+    <Compile Include="Enums\ContactTypeEnum.vb" />
+    <Compile Include="Enums\ContractStateEnum.vb" />
+    <Compile Include="Enums\ContractTypeEnum.vb" />
+    <Compile Include="Enums\ControlTypeEnum.vb" />
+    <Compile Include="Enums\CreditorTypeEnum.vb" />
+    <Compile Include="Enums\CreditRiskReportEnum.vb" />
+    <Compile Include="Enums\CurrencyEnum.vb" />
+    <Compile Include="Enums\DeviceTypeEnum.vb" />
+    <Compile Include="Enums\EducationTypeEnum.vb" />
+    <Compile Include="Enums\EmploymentTypeEnum.vb" />
+    <Compile Include="Enums\EncryptKeyEnum.vb" />
+    <Compile Include="Enums\ErrorLogTypeEnum.vb" />
+    <Compile Include="Enums\FirmRegistrationStateEnum.vb" />
+    <Compile Include="Enums\GenderEnum.vb" />
+    <Compile Include="Enums\KycStateEnum.vb" />
+    <Compile Include="Enums\LayerEnum.vb" />
+    <Compile Include="Enums\LegalFormsEnum.vb" />
+    <Compile Include="Enums\LocationTypeEnum.vb" />
+    <Compile Include="Enums\LoginStateEnum.vb" />
+    <Compile Include="Enums\LogTypeEnum.vb" />
+    <Compile Include="Enums\MaritalStatusEnum.vb" />
+    <Compile Include="Enums\NegativeBackgroundStateEnum.vb" />
+    <Compile Include="Enums\NegativeContractStatusEnum.vb" />
+    <Compile Include="Enums\NotificationTypeEnum.vb" />
+    <Compile Include="Enums\OperatorTypeEnum.vb" />
+    <Compile Include="Enums\PageTypeEnum.vb" />
+    <Compile Include="Enums\PasswordPolicyEnum.vb" />
+    <Compile Include="Enums\PaymentTypeEnum.vb" />
+    <Compile Include="Enums\PersonageRoleEnum.vb" />
+    <Compile Include="Enums\PlaceEnum.vb" />
+    <Compile Include="Enums\PortalPaymentTypeEnum.vb" />
+    <Compile Include="Enums\PriceListTypeEnum.vb" />
+    <Compile Include="Enums\ReportGenerateTypeEnum.vb" />
+    <Compile Include="Enums\ReportSampleTypeEnum.vb" />
+    <Compile Include="Enums\ReportSourceEnum.vb" />
+    <Compile Include="Enums\ReportTypeEnum.vb" />
+    <Compile Include="Enums\RequestRegistrationFileTypeEnum.vb" />
+    <Compile Include="Enums\RequestRegistrationInsStateEnum.vb" />
+    <Compile Include="Enums\RequestRegistrationStateEnum.vb" />
+    <Compile Include="Enums\RequestRegistrationTypeEnum.vb" />
+    <Compile Include="Enums\ResetPasswordTypeEnum.vb" />
+    <Compile Include="Enums\RoleEnum.vb" />
+    <Compile Include="Enums\RptTrackingUserStateEnum.vb" />
+    <Compile Include="Enums\ScoreParametersEnum.vb" />
+    <Compile Include="Enums\ShahkarRequestStateEnum.vb" />
+    <Compile Include="Enums\ShahkarStateEnum.vb" />
+    <Compile Include="Enums\SMSLogStateEnum.vb" />
+    <Compile Include="Enums\SMSTypeEnum.vb" />
+    <Compile Include="Enums\SubSystemEnum.vb" />
+    <Compile Include="Enums\TokenStateEnum.vb" />
+    <Compile Include="Enums\TypeOfFinancingEnum.vb" />
+    <Compile Include="Enums\UserPaymentTypeEnum.vb" />
+    <Compile Include="Enums\UserRegistrationStateEnum.vb" />
+    <Compile Include="Enums\UserTypeEnum.vb" />
+    <Compile Include="Enums\UserUpdateStateEnum.vb" />
+    <Compile Include="Enums\VerificationStateEnum.vb" />
+    <Compile Include="Enums\VerifyCellphoneStateApiEnum.vb" />
+    <Compile Include="Enums\VerifyCellPhoneStateEnum.vb" />
+    <Compile Include="Enums\VerifyEmailStateEnum.vb" />
+    <Compile Include="Interfaces\ISmsProvider.vb" />
+    <Compile Include="Modules\ActionFilter.vb" />
+    <Compile Include="Modules\Extenctions.vb" />
+    <Compile Include="Modules\JaamRequestStatusData.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

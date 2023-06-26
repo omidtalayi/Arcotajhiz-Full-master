@@ -1,0 +1,754 @@
+<BatchResponse
+	xmlns="http://cb4.creditinfosolutions.com/BatchUploader/Batch">
+	<Header>
+		<BatchId>135752931</BatchId>
+		<State>Finished</State>
+		<BeginTimeStamp>2019-10-09T11:27:39.9635021Z</BeginTimeStamp>
+		<TimeStamp>2019-10-09T11:27:41.2745933Z</TimeStamp>
+		<FinishTimeStamp>2019-10-09T11:27:41.2745933Z</FinishTimeStamp>
+		<Duration>1.3111</Duration>
+		<Identifier>271876035</Identifier>
+		<Subscriber>HooshoDanesh</Subscriber>
+		<SubscriberUnit>It</SubscriberUnit>
+		<CommandsUploaded>1</CommandsUploaded>
+		<CommandsCompleted>1</CommandsCompleted>
+	</Header>
+	<Commands>
+		<Command identifier="1">
+			<Cis.CB4.Projects.IR.IranCreditScoring.Reports.Body.Products.AdvancedIndividualReport.Response
+				xmlns="http://cb4.creditinfosolutions.com/BatchUploader/Batch">
+				<Reports.EmptyIndividualData>
+					<Types.Subject.Individual.PersonalCode>1000000000</Types.Subject.Individual.PersonalCode>
+				</Reports.EmptyIndividualData>
+				<Reports.BasicIndividualData>
+					<Relations.Subjects.PersonalData>
+						<Types.Subject.Individual.FarthersName></Types.Subject.Individual.FarthersName>
+						<Types.Subject.Individual.FirstName></Types.Subject.Individual.FirstName>
+						<Types.Subject.Individual.Surname></Types.Subject.Individual.Surname>
+						<Lookups.Gender></Lookups.Gender>
+						<Lookups.MaritalStatus></Lookups.MaritalStatus>
+						<Lookups.BorrowerClassification></Lookups.BorrowerClassification>
+					</Relations.Subjects.PersonalData>
+					<Relations.Subjects.BirthData>
+						<Types.Subject.BirthData.BirthSurname></Types.Subject.BirthData.BirthSurname>
+						<Types.Subject.BirthData.DateOfBirth>2014-06-20T19:30:00Z</Types.Subject.BirthData.DateOfBirth>
+						<Types.Subject.BirthData.PlaceOfBirth></Types.Subject.BirthData.PlaceOfBirth>
+						<Lookups.CountryOfBirth></Lookups.CountryOfBirth>
+					</Relations.Subjects.BirthData>
+					<Reports.SubjectData.Current.NegativeSubjectStatus key="00">
+						<Reports.LastUpdate></Reports.LastUpdate>
+						<Lookups.NegativeSubjectStatus></Lookups.NegativeSubjectStatus>
+						<Reports.Creditor>بانک ملت</Reports.Creditor>
+					</Reports.SubjectData.Current.NegativeSubjectStatus>
+					<Reports.SubjectData.Current.NegativeSubjectStatus key="01">
+						<Reports.LastUpdate>2014-06-20T19:30:00Z</Reports.LastUpdate>
+						<Lookups.NegativeSubjectStatus>NegativeStatusOfSubject.NoNegativeStatus</Lookups.NegativeSubjectStatus>
+						<Reports.Creditor>بانک مسکن</Reports.Creditor>
+					</Reports.SubjectData.Current.NegativeSubjectStatus>
+					<Reports.SubjectData.Current.NegativeSubjectStatus key="02">
+						<Reports.LastUpdate>2017-06-21T00:00:00Z</Reports.LastUpdate>
+						<Lookups.NegativeSubjectStatus>NegativeStatusOfSubject.NoNegativeStatus</Lookups.NegativeSubjectStatus>
+						<Reports.Creditor>بانک سامان</Reports.Creditor>
+					</Reports.SubjectData.Current.NegativeSubjectStatus>
+				</Reports.BasicIndividualData>
+				<Reports.AdvancedIndividualData>
+					<Relations.Subjects.AdditionalData>
+						<Relations.Subjects.Employment />
+					</Relations.Subjects.AdditionalData>
+				</Reports.AdvancedIndividualData>
+				<Reports.SubjectData.AddressesIndividual>
+					<Reports.Addresses.PermanentAddress key="1">
+						<Relations.Addresses.AddressTypeChoice>
+							<Relations.Addresses.TextAddress>
+								<Types.Subject.Address.TextAddress></Types.Subject.Address.TextAddress>
+							</Relations.Addresses.TextAddress>
+						</Relations.Addresses.AddressTypeChoice>
+					</Reports.Addresses.PermanentAddress>
+					<Reports.Addresses.EmployerAddress key="1">
+						<Relations.Addresses.AddressTypeChoice>
+							<Relations.Addresses.TextAddress>
+								<Types.Subject.Address.TextAddress></Types.Subject.Address.TextAddress>
+							</Relations.Addresses.TextAddress>
+						</Relations.Addresses.AddressTypeChoice>
+					</Reports.Addresses.EmployerAddress>
+				</Reports.SubjectData.AddressesIndividual>
+				<Reports.SubjectData.Contacts>
+					<Reports.Contacts.Cellular key="0">
+						<Types.Subject.Communication.ContactNumber></Types.Subject.Communication.ContactNumber>
+					</Reports.Contacts.Cellular>
+					<Reports.Contacts.Cellular key="1">
+						<Types.Subject.Communication.ContactNumber></Types.Subject.Communication.ContactNumber>
+					</Reports.Contacts.Cellular>
+					<Reports.Contacts.Phone key="0">
+						<Types.Subject.Communication.ContactNumber></Types.Subject.Communication.ContactNumber>
+					</Reports.Contacts.Phone>
+					<Reports.Contacts.Phone key="1">
+						<Types.Subject.Communication.ContactNumber></Types.Subject.Communication.ContactNumber>
+					</Reports.Contacts.Phone>
+				</Reports.SubjectData.Contacts>
+				<Reports.Inquiries>
+					<Reports.Inquiries.LastMonth></Reports.Inquiries.LastMonth>
+					<Reports.Inquiries.ThreeMonths></Reports.Inquiries.ThreeMonths>
+					<Reports.Inquiries.SixMonths></Reports.Inquiries.SixMonths>
+					<Reports.Inquiries.TwelveMonths></Reports.Inquiries.TwelveMonths>
+				</Reports.Inquiries>
+				<Reports.Summary>
+					<Reports.Summary.TotalDebtOverdue key="IRR">
+						<Types.Amount></Types.Amount>
+						<Lookups.CurrencyCodes></Lookups.CurrencyCodes>
+					</Reports.Summary.TotalDebtOverdue>
+					<Reports.Summary.TotalNumberOfUnpaidInstalments></Reports.Summary.TotalNumberOfUnpaidInstalments>
+					<Reports.Summary.TotalOutstandingAmount key="IRR">
+						<Types.Amount>0.0000</Types.Amount>
+						<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+					</Reports.Summary.TotalOutstandingAmount>
+					<Reports.Summary.NumberOfExistingOperations>1</Reports.Summary.NumberOfExistingOperations>
+					<Reports.Summary.NumberOfTerminatedOperations>0</Reports.Summary.NumberOfTerminatedOperations>
+				</Reports.Summary>
+				<Reports.SummaryCreditors>
+					<Reports.SummaryCreditor key="5">
+						<Reports.Creditor>بانک مسکن</Reports.Creditor>
+						<Reports.Summary.TotalDebtOverdue key="IRR">
+							<Types.Amount>0.0000</Types.Amount>
+							<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+						</Reports.Summary.TotalDebtOverdue>
+						<Reports.Summary.TotalNumberOfUnpaidInstalments>0</Reports.Summary.TotalNumberOfUnpaidInstalments>
+						<Reports.Summary.TotalOutstandingAmount key="IRR">
+							<Types.Amount>0.0000</Types.Amount>
+							<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+						</Reports.Summary.TotalOutstandingAmount>
+						<Reports.Summary.NumberOfExistingOperations>1</Reports.Summary.NumberOfExistingOperations>
+						<Reports.Summary.NumberOfTerminatedOperations>0</Reports.Summary.NumberOfTerminatedOperations>
+					</Reports.SummaryCreditor>
+				</Reports.SummaryCreditors>
+				<Reports.BaseDataOperations>
+					<Reports.ContractData.ExistingOperationsGuarantor>
+						<Reports.ContractData.Instalments>
+							<Reports.ContractData.Instalment key="0">
+								<Relations.Contracts.InstalmentDetails>
+									<Lookups.TypeOfFinancingInstalments>TypeOfFinancingInstalments.LetterOfGuarantee</Lookups.TypeOfFinancingInstalments>
+									<Lookups.TypeOfInstalments>TypeOfInstalments.Fixed</Lookups.TypeOfInstalments>
+									<Lookups.PeriodicityOfPayments>PeriodicityOfPayments.IrregularInstalments</Lookups.PeriodicityOfPayments>
+									<Lookups.MethodOfPayment>MethodOfPayment.DirectRemittance</Lookups.MethodOfPayment>
+									<Relations.Amounts.TotalCredit>
+										<Types.Amount>1715000000.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.TotalCredit>
+									<Relations.Amounts.StandardPeriodicalInstalment>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.StandardPeriodicalInstalment>
+									<Relations.Amounts.Overdue>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Overdue>
+									<Relations.Amounts.Outstanding>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Outstanding>
+								</Relations.Contracts.InstalmentDetails>
+								<Reports.HistoricalCalendar.Instalment>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139707">
+										<Reports.HistoricalCalendar.Month>7</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139708">
+										<Reports.HistoricalCalendar.Month>8</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139709">
+										<Reports.HistoricalCalendar.Month>9</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139710">
+										<Reports.HistoricalCalendar.Month>10</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139711">
+										<Reports.HistoricalCalendar.Month>11</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139712">
+										<Reports.HistoricalCalendar.Month>12</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139801">
+										<Reports.HistoricalCalendar.Month>1</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139802">
+										<Reports.HistoricalCalendar.Month>2</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139803">
+										<Relations.Amounts.Overdue>
+											<Types.Amount>0.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Overdue>
+										<Reports.HistoricalCalendar.Month>3</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139804">
+										<Reports.HistoricalCalendar.Month>4</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139805">
+										<Reports.HistoricalCalendar.Month>5</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139806">
+										<Relations.Amounts.Overdue>
+											<Types.Amount>0.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Overdue>
+										<Reports.HistoricalCalendar.Month>6</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+								</Reports.HistoricalCalendar.Instalment>
+								<Reports.ContractData.GeneralInformation>
+									<Lookups.NegativeContractStatus>NegativeContractStatus.NoNegativeStatus</Lookups.NegativeContractStatus>
+									<Relations.Contracts.Dates>
+										<Types.Contract.Dates.Start>2019-05-27T20:30:00Z</Types.Contract.Dates.Start>
+										<Types.Contract.Dates.ExpectedEnd>2020-03-18T20:30:00Z</Types.Contract.Dates.ExpectedEnd>
+									</Relations.Contracts.Dates>
+									<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									<Lookups.PurposeOfTheCredit>PurposeOfTheCredit.Construct</Lookups.PurposeOfTheCredit>
+									<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.Guarantor</Lookups.RoleOfConnectedSubject>
+									<Reports.ContractData.Creditor>بانک سامان</Reports.ContractData.Creditor>
+									<Reports.LastUpdate>2019-09-21T00:00:00Z</Reports.LastUpdate>
+									<Lookups.PhaseOfOperation>PhaseOfOperation.Existing</Lookups.PhaseOfOperation>
+								</Reports.ContractData.GeneralInformation>
+								<Reports.ContractData.ConnectedSubjects>
+									<Reports.ContractData.ConnectedSubject key="0">
+										<Reports.ContractData.ConnectedCompany>
+											<Types.Subject.Company.RegistrationNumber>10001-336949</Types.Subject.Company.RegistrationNumber>
+											<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.DebtorMainApplicant</Lookups.RoleOfConnectedSubject>
+										</Reports.ContractData.ConnectedCompany>
+									</Reports.ContractData.ConnectedSubject>
+								</Reports.ContractData.ConnectedSubjects>
+							</Reports.ContractData.Instalment>
+						</Reports.ContractData.Instalments>
+					</Reports.ContractData.ExistingOperationsGuarantor>
+					<Reports.ContractData.TerminatedOperationsDebtor>
+						<Reports.ContractData.Instalments>
+							<Reports.ContractData.Instalment key="0">
+								<Relations.Contracts.InstalmentDetails>
+									<Lookups.TypeOfFinancingInstalments>TypeOfFinancingInstalments.InstallmentSales</Lookups.TypeOfFinancingInstalments>
+									<Lookups.TypeOfInstalments>TypeOfInstalments.Fixed</Lookups.TypeOfInstalments>
+									<Lookups.PeriodicityOfPayments>PeriodicityOfPayments.MonthlyInstalments30Days</Lookups.PeriodicityOfPayments>
+									<Lookups.MethodOfPayment>MethodOfPayment.BankingReceipt</Lookups.MethodOfPayment>
+									<Relations.Amounts.TotalCredit>
+										<Types.Amount>288729617.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.TotalCredit>
+									<Types.Contract.NumberOfInstalments>120</Types.Contract.NumberOfInstalments>
+									<Relations.Amounts.StandardPeriodicalInstalment>
+										<Types.Amount>2374000.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.StandardPeriodicalInstalment>
+									<Relations.Amounts.Overdue>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Overdue>
+									<Relations.Amounts.Outstanding>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Outstanding>
+								</Relations.Contracts.InstalmentDetails>
+								<Reports.HistoricalCalendar.Instalment>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139707">
+										<Reports.HistoricalCalendar.Month>7</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139708">
+										<Reports.HistoricalCalendar.Month>8</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139709">
+										<Reports.HistoricalCalendar.Month>9</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139710">
+										<Reports.HistoricalCalendar.Month>10</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139711">
+										<Reports.HistoricalCalendar.Month>11</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139712">
+										<Reports.HistoricalCalendar.Month>12</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139801">
+										<Reports.HistoricalCalendar.Month>1</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139802">
+										<Reports.HistoricalCalendar.Month>2</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139803">
+										<Reports.HistoricalCalendar.Month>3</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139804">
+										<Reports.HistoricalCalendar.Month>4</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139805">
+										<Reports.HistoricalCalendar.Month>5</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139806">
+										<Reports.HistoricalCalendar.Month>6</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+								</Reports.HistoricalCalendar.Instalment>
+								<Reports.ContractData.GeneralInformation>
+									<Lookups.NegativeContractStatus>NegativeContractStatus.NoNegativeStatus</Lookups.NegativeContractStatus>
+									<Relations.Contracts.Dates>
+										<Types.Contract.Dates.Start>2008-04-27T19:30:00Z</Types.Contract.Dates.Start>
+										<Types.Contract.Dates.ExpectedEnd>2018-04-27T19:30:00Z</Types.Contract.Dates.ExpectedEnd>
+										<Types.Contract.Dates.RealEnd>2011-11-26T20:30:00Z</Types.Contract.Dates.RealEnd>
+									</Relations.Contracts.Dates>
+									<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									<Lookups.PurposeOfTheCredit>PurposeOfTheCredit.Others</Lookups.PurposeOfTheCredit>
+									<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.DebtorMainApplicant</Lookups.RoleOfConnectedSubject>
+									<Reports.ContractData.Creditor>بانک مسکن</Reports.ContractData.Creditor>
+									<Reports.LastUpdate>2015-09-21T00:00:00Z</Reports.LastUpdate>
+									<Lookups.PhaseOfOperation>PhaseOfOperation.TerminatedInAdvanceCorrectlyBecauseOfClientsWish</Lookups.PhaseOfOperation>
+								</Reports.ContractData.GeneralInformation>
+								<Reports.ContractData.ConnectedSubjects />
+								<Reports.ContractData.Collaterals>
+									<Reports.ContractData.Collateral key="0">
+										<Lookups.TypeOfGuarantee>GuaranteeType.PersonalRealProperty</Lookups.TypeOfGuarantee>
+										<Relations.Amounts.Guarantee>
+											<Types.Amount>810000000.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Guarantee>
+									</Reports.ContractData.Collateral>
+								</Reports.ContractData.Collaterals>
+							</Reports.ContractData.Instalment>
+						</Reports.ContractData.Instalments>
+					</Reports.ContractData.TerminatedOperationsDebtor>
+					<Reports.ContractData.TerminatedOperationsGuarantor>
+						<Reports.ContractData.Instalments>
+							<Reports.ContractData.Instalment key="0">
+								<Relations.Contracts.InstalmentDetails>
+									<Lookups.TypeOfFinancingInstalments>TypeOfFinancingInstalments.CivilPartnership</Lookups.TypeOfFinancingInstalments>
+									<Lookups.TypeOfInstalments>TypeOfInstalments.Fixed</Lookups.TypeOfInstalments>
+									<Lookups.PeriodicityOfPayments>PeriodicityOfPayments.AtTheFinalDayOfThePeriodOfContract</Lookups.PeriodicityOfPayments>
+									<Lookups.MethodOfPayment>MethodOfPayment.CurrentAccount</Lookups.MethodOfPayment>
+									<Relations.Amounts.TotalCredit>
+										<Types.Amount>89844874.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.TotalCredit>
+									<Types.Contract.NumberOfInstalments>36</Types.Contract.NumberOfInstalments>
+									<Relations.Amounts.StandardPeriodicalInstalment>
+										<Types.Amount>89844874.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.StandardPeriodicalInstalment>
+									<Relations.Amounts.Overdue>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Overdue>
+									<Relations.Amounts.Outstanding>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Outstanding>
+								</Relations.Contracts.InstalmentDetails>
+								<Reports.HistoricalCalendar.Instalment>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139707">
+										<Reports.HistoricalCalendar.Month>7</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139708">
+										<Reports.HistoricalCalendar.Month>8</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139709">
+										<Reports.HistoricalCalendar.Month>9</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139710">
+										<Reports.HistoricalCalendar.Month>10</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139711">
+										<Reports.HistoricalCalendar.Month>11</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139712">
+										<Reports.HistoricalCalendar.Month>12</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139801">
+										<Reports.HistoricalCalendar.Month>1</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139802">
+										<Reports.HistoricalCalendar.Month>2</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139803">
+										<Reports.HistoricalCalendar.Month>3</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139804">
+										<Reports.HistoricalCalendar.Month>4</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139805">
+										<Reports.HistoricalCalendar.Month>5</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139806">
+										<Reports.HistoricalCalendar.Month>6</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+								</Reports.HistoricalCalendar.Instalment>
+								<Reports.ContractData.GeneralInformation>
+									<Lookups.NegativeContractStatus>NegativeContractStatus.NoNegativeStatus</Lookups.NegativeContractStatus>
+									<Relations.Contracts.Dates>
+										<Types.Contract.Dates.Start>2011-10-21T20:30:00Z</Types.Contract.Dates.Start>
+										<Types.Contract.Dates.ExpectedEnd>2014-10-20T20:30:00Z</Types.Contract.Dates.ExpectedEnd>
+										<Types.Contract.Dates.RealEnd>2014-09-21T20:30:00Z</Types.Contract.Dates.RealEnd>
+									</Relations.Contracts.Dates>
+									<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									<Lookups.PurposeOfTheCredit>PurposeOfTheCredit.PurchaseOfPersonalConsumingProducts</Lookups.PurposeOfTheCredit>
+									<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.Guarantor</Lookups.RoleOfConnectedSubject>
+									<Reports.ContractData.Creditor>بانک ملت</Reports.ContractData.Creditor>
+									<Reports.LastUpdate>2014-09-21T00:00:00Z</Reports.LastUpdate>
+									<Lookups.PhaseOfOperation>PhaseOfOperation.TerminatedInAdvanceCorrectlyBecauseOfClientsWish</Lookups.PhaseOfOperation>
+								</Reports.ContractData.GeneralInformation>
+								<Reports.ContractData.ConnectedSubjects>
+									<Reports.ContractData.ConnectedSubject key="1">
+										<Reports.ContractData.ConnectedIndividuals>
+											<Types.Subject.Individual.PersonalCode>1000000000</Types.Subject.Individual.PersonalCode>
+											<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.DebtorMainApplicant</Lookups.RoleOfConnectedSubject>
+										</Reports.ContractData.ConnectedIndividuals>
+									</Reports.ContractData.ConnectedSubject>
+								</Reports.ContractData.ConnectedSubjects>
+							</Reports.ContractData.Instalment>
+							<Reports.ContractData.Instalment key="2">
+								<Relations.Contracts.InstalmentDetails>
+									<Lookups.TypeOfFinancingInstalments>TypeOfFinancingInstalments.LetterOfGuarantee</Lookups.TypeOfFinancingInstalments>
+									<Lookups.TypeOfInstalments>TypeOfInstalments.Fixed</Lookups.TypeOfInstalments>
+									<Lookups.PeriodicityOfPayments>PeriodicityOfPayments.IrregularInstalments</Lookups.PeriodicityOfPayments>
+									<Lookups.MethodOfPayment>MethodOfPayment.DirectRemittance</Lookups.MethodOfPayment>
+									<Relations.Amounts.TotalCredit>
+										<Types.Amount>503550000.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.TotalCredit>
+									<Relations.Amounts.StandardPeriodicalInstalment>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.StandardPeriodicalInstalment>
+									<Relations.Amounts.Overdue>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Overdue>
+									<Relations.Amounts.Outstanding>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Outstanding>
+								</Relations.Contracts.InstalmentDetails>
+								<Reports.HistoricalCalendar.Instalment>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139707">
+										<Reports.HistoricalCalendar.Month>7</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139708">
+										<Reports.HistoricalCalendar.Month>8</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139709">
+										<Reports.HistoricalCalendar.Month>9</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139710">
+										<Reports.HistoricalCalendar.Month>10</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139711">
+										<Reports.HistoricalCalendar.Month>11</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139712">
+										<Reports.HistoricalCalendar.Month>12</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139801">
+										<Reports.HistoricalCalendar.Month>1</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139802">
+										<Reports.HistoricalCalendar.Month>2</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139803">
+										<Reports.HistoricalCalendar.Month>3</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139804">
+										<Reports.HistoricalCalendar.Month>4</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139805">
+										<Reports.HistoricalCalendar.Month>5</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139806">
+										<Relations.Amounts.Overdue>
+											<Types.Amount>0.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Overdue>
+										<Reports.HistoricalCalendar.Month>6</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+								</Reports.HistoricalCalendar.Instalment>
+								<Reports.ContractData.GeneralInformation>
+									<Lookups.NegativeContractStatus>NegativeContractStatus.NoNegativeStatus</Lookups.NegativeContractStatus>
+									<Relations.Contracts.Dates>
+										<Types.Contract.Dates.Start>1756-01-01T00:00:00Z</Types.Contract.Dates.Start>
+										<Types.Contract.Dates.ExpectedEnd>1756-01-01T00:00:00Z</Types.Contract.Dates.ExpectedEnd>
+										<Types.Contract.Dates.RealEnd>2019-09-21T20:30:00Z</Types.Contract.Dates.RealEnd>
+									</Relations.Contracts.Dates>
+									<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									<Lookups.PurposeOfTheCredit>PurposeOfTheCredit.Construct</Lookups.PurposeOfTheCredit>
+									<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.Guarantor</Lookups.RoleOfConnectedSubject>
+									<Reports.ContractData.Creditor>بانک سامان</Reports.ContractData.Creditor>
+									<Reports.LastUpdate>2019-09-21T00:00:00Z</Reports.LastUpdate>
+									<Lookups.PhaseOfOperation>PhaseOfOperation.TerminatedAccordingTheContract</Lookups.PhaseOfOperation>
+								</Reports.ContractData.GeneralInformation>
+								<Reports.ContractData.ConnectedSubjects>
+									<Reports.ContractData.ConnectedSubject key="0">
+										<Reports.ContractData.ConnectedCompany>
+											<Types.Subject.Company.RegistrationNumber>10001-336949</Types.Subject.Company.RegistrationNumber>
+											<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.DebtorMainApplicant</Lookups.RoleOfConnectedSubject>
+										</Reports.ContractData.ConnectedCompany>
+									</Reports.ContractData.ConnectedSubject>
+								</Reports.ContractData.ConnectedSubjects>
+								<Reports.ContractData.Collaterals>
+									<Reports.ContractData.Collateral key="1">
+										<Lookups.TypeOfGuarantee>GuaranteeType.PersonalRealProperty</Lookups.TypeOfGuarantee>
+										<Relations.Amounts.Guarantee>
+											<Types.Amount>521174250.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Guarantee>
+									</Reports.ContractData.Collateral>
+								</Reports.ContractData.Collaterals>
+							</Reports.ContractData.Instalment>
+							<Reports.ContractData.Instalment key="5">
+								<Relations.Contracts.InstalmentDetails>
+									<Lookups.TypeOfFinancingInstalments>TypeOfFinancingInstalments.LetterOfGuarantee</Lookups.TypeOfFinancingInstalments>
+									<Lookups.TypeOfInstalments>TypeOfInstalments.Fixed</Lookups.TypeOfInstalments>
+									<Lookups.PeriodicityOfPayments>PeriodicityOfPayments.IrregularInstalments</Lookups.PeriodicityOfPayments>
+									<Lookups.MethodOfPayment>MethodOfPayment.DirectRemittance</Lookups.MethodOfPayment>
+									<Relations.Amounts.TotalCredit>
+										<Types.Amount>80000000.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.TotalCredit>
+									<Relations.Amounts.StandardPeriodicalInstalment>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.StandardPeriodicalInstalment>
+									<Relations.Amounts.Overdue>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Overdue>
+									<Relations.Amounts.Outstanding>
+										<Types.Amount>0.0000</Types.Amount>
+										<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									</Relations.Amounts.Outstanding>
+								</Relations.Contracts.InstalmentDetails>
+								<Reports.HistoricalCalendar.Instalment>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139707">
+										<Reports.HistoricalCalendar.Month>7</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139708">
+										<Reports.HistoricalCalendar.Month>8</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139709">
+										<Reports.HistoricalCalendar.Month>9</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139710">
+										<Reports.HistoricalCalendar.Month>10</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139711">
+										<Reports.HistoricalCalendar.Month>11</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139712">
+										<Reports.HistoricalCalendar.Month>12</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1397</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139801">
+										<Reports.HistoricalCalendar.Month>1</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139802">
+										<Reports.HistoricalCalendar.Month>2</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139803">
+										<Reports.HistoricalCalendar.Month>3</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139804">
+										<Reports.HistoricalCalendar.Month>4</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139805">
+										<Reports.HistoricalCalendar.Month>5</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+									<Reports.HistoricalCalendar.InstalmentRecord key="139806">
+										<Relations.Amounts.Overdue>
+											<Types.Amount>0.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Overdue>
+										<Reports.HistoricalCalendar.Month>6</Reports.HistoricalCalendar.Month>
+										<Reports.HistoricalCalendar.Year>1398</Reports.HistoricalCalendar.Year>
+									</Reports.HistoricalCalendar.InstalmentRecord>
+								</Reports.HistoricalCalendar.Instalment>
+								<Reports.ContractData.GeneralInformation>
+									<Lookups.NegativeContractStatus>NegativeContractStatus.NoNegativeStatus</Lookups.NegativeContractStatus>
+									<Relations.Contracts.Dates>
+										<Types.Contract.Dates.Start>1756-01-01T00:00:00Z</Types.Contract.Dates.Start>
+										<Types.Contract.Dates.ExpectedEnd>1756-01-01T00:00:00Z</Types.Contract.Dates.ExpectedEnd>
+										<Types.Contract.Dates.RealEnd>2019-09-21T20:30:00Z</Types.Contract.Dates.RealEnd>
+									</Relations.Contracts.Dates>
+									<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+									<Lookups.PurposeOfTheCredit>PurposeOfTheCredit.Construct</Lookups.PurposeOfTheCredit>
+									<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.Guarantor</Lookups.RoleOfConnectedSubject>
+									<Reports.ContractData.Creditor>بانک سامان</Reports.ContractData.Creditor>
+									<Reports.LastUpdate>2019-09-21T00:00:00Z</Reports.LastUpdate>
+									<Lookups.PhaseOfOperation>PhaseOfOperation.TerminatedAccordingTheContract</Lookups.PhaseOfOperation>
+								</Reports.ContractData.GeneralInformation>
+								<Reports.ContractData.ConnectedSubjects>
+									<Reports.ContractData.ConnectedSubject key="0">
+										<Reports.ContractData.ConnectedCompany>
+											<Types.Subject.Company.RegistrationNumber>10001-336949</Types.Subject.Company.RegistrationNumber>
+											<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.DebtorMainApplicant</Lookups.RoleOfConnectedSubject>
+										</Reports.ContractData.ConnectedCompany>
+									</Reports.ContractData.ConnectedSubject>
+								</Reports.ContractData.ConnectedSubjects>
+								<Reports.ContractData.Collaterals>
+									<Reports.ContractData.Collateral key="0">
+										<Lookups.TypeOfGuarantee>GuaranteeType.PersonalRealProperty</Lookups.TypeOfGuarantee>
+										<Relations.Amounts.Guarantee>
+											<Types.Amount>72000000.0000</Types.Amount>
+											<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+										</Relations.Amounts.Guarantee>
+									</Reports.ContractData.Collateral>
+								</Reports.ContractData.Collaterals>
+							</Reports.ContractData.Instalment>
+						</Reports.ContractData.Instalments>
+					</Reports.ContractData.TerminatedOperationsGuarantor>
+				</Reports.BaseDataOperations>
+				<Reports.SubjectData.IDs />
+				<Reports.Lookups.ReportStatus>ReportStatus.OK</Reports.Lookups.ReportStatus>
+				<Reports.SummaryReport>
+					<Reports.Lookups.ReportStatus>ReportStatus.OK</Reports.Lookups.ReportStatus>
+					<NegativeStatusesAndInquiries>
+						<NumberOfInquiries>
+							<NumberOfInquiriesRecord key="Bank">
+								<Lookups.SubscriberType>SubscriberType.Bank</Lookups.SubscriberType>
+								<Last1Month>3</Last1Month>
+								<Last1Year>80</Last1Year>
+							</NumberOfInquiriesRecord>
+							<NumberOfInquiriesRecord key="CreditUnion">
+								<Lookups.SubscriberType>SubscriberType.CreditUnion</Lookups.SubscriberType>
+								<Last1Month>0</Last1Month>
+								<Last1Year>0</Last1Year>
+							</NumberOfInquiriesRecord>
+							<NumberOfInquiriesRecord key="InsuranceCompany">
+								<Lookups.SubscriberType>SubscriberType.InsuranceCompany</Lookups.SubscriberType>
+								<Last1Month>0</Last1Month>
+								<Last1Year>0</Last1Year>
+							</NumberOfInquiriesRecord>
+							<NumberOfInquiriesRecord key="Leasing">
+								<Lookups.SubscriberType>SubscriberType.Leasing</Lookups.SubscriberType>
+								<Last1Month>0</Last1Month>
+								<Last1Year>0</Last1Year>
+							</NumberOfInquiriesRecord>
+							<NumberOfInquiriesRecord key="Other">
+								<Lookups.SubscriberType>SubscriberType.Other</Lookups.SubscriberType>
+								<Last1Month>14</Last1Month>
+								<Last1Year>295</Last1Year>
+							</NumberOfInquiriesRecord>
+						</NumberOfInquiries>
+					</NegativeStatusesAndInquiries>
+					<PersonalInformation>
+						<PersonalCode>1000000000</PersonalCode>
+						<FirstName></FirstName>
+						<Surname></Surname>
+						<FathersName></FathersName>
+						<DateOfBirth>1975-04-29T20:30:00Z</DateOfBirth>
+						<PlaceOfBirth></PlaceOfBirth>
+						<Lookups.Gender></Lookups.Gender>
+						<Lookups.MaritalStatus></Lookups.MaritalStatus>
+					</PersonalInformation>
+					<AddressAndContactInformation>
+						<HomeAddress>ایران</HomeAddress>
+						<WorkAddress>ایران</WorkAddress>
+						<MobilePhones>
+							<MobilePhone key="0">
+								<ContactValue></ContactValue>
+							</MobilePhone>
+							<MobilePhone key="1">
+								<ContactValue></ContactValue>
+							</MobilePhone>
+						</MobilePhones>
+						<HomePhones>
+							<HomePhone key="0">
+								<ContactValue></ContactValue>
+							</HomePhone>
+							<HomePhone key="1">
+								<ContactValue></ContactValue>
+							</HomePhone>
+						</HomePhones>
+					</AddressAndContactInformation>
+					<ContractsSummary>
+						<Contracts>
+							<ContractRecord key="0">
+								<Lookups.TypeOfContract>TypeOfContract.Instalment</Lookups.TypeOfContract>
+								<Products.Types.Subscriber>Maskan</Products.Types.Subscriber>
+								<Products.Types.SubscriberLocalName>بانک مسکن</Products.Types.SubscriberLocalName>
+								<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+								<NumberOfOpenContracts>0</NumberOfOpenContracts>
+								<NumberOfTerminatedContracts>1</NumberOfTerminatedContracts>
+								<OutstandingAmount>0</OutstandingAmount>
+								<OverdueAmount>0</OverdueAmount>
+							</ContractRecord>
+							<TotalRecord key="1">
+								<Lookups.CurrencyCodes>CurrencyCodes.IRR</Lookups.CurrencyCodes>
+								<NumberOfOpenContracts>0</NumberOfOpenContracts>
+								<NumberOfTerminatedContracts>1</NumberOfTerminatedContracts>
+								<OutstandingAmount>0</OutstandingAmount>
+								<OverdueAmount>0</OverdueAmount>
+							</TotalRecord>
+						</Contracts>
+					</ContractsSummary>
+					<SubjectRoles>
+						<SubjectRoleRecord key="0">
+							<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.DebtorMainApplicant</Lookups.RoleOfConnectedSubject>
+							<NumberOfContracts>0</NumberOfContracts>
+						</SubjectRoleRecord>
+						<SubjectRoleRecord key="1">
+							<Lookups.RoleOfConnectedSubject>RoleOfConnectedSubject.Guarantor</Lookups.RoleOfConnectedSubject>
+							<NumberOfContracts>3</NumberOfContracts>
+						</SubjectRoleRecord>
+					</SubjectRoles>
+					<ReportDate>2019-10-09T11:27:40.5881889Z</ReportDate>
+				</Reports.SummaryReport>
+			</Cis.CB4.Projects.IR.IranCreditScoring.Reports.Body.Products.AdvancedIndividualReport.Response>
+		</Command>
+	</Commands>
+</BatchResponse>

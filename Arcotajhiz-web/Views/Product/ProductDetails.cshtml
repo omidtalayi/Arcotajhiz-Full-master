@@ -1,0 +1,142 @@
+﻿@using ARCO.Entities
+@using ARCO.Entities.Models;
+@using System.Linq;
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ProductEntity product = ViewBag.product;
+    ViewBag.Title = "محصولات | " + product.name;
+}
+<main class="main-content site-wrapper-reveal">
+    <!--== Start Page Title Area ==-->
+    <section class="page-title-area" data-bg-img="../assets/img/photos/bg-page-title.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-title-content text-center">
+                        <h2 class="title text-white">@product.name</h2>
+                        <div class="bread-crumbs">
+                            <a href="/">خانه<span class="breadcrumb-sep">/</span></a>
+                            <a href="/Product">محصولات<span class="breadcrumb-sep">/</span></a>
+                            @{
+
+                                if (product.category != null)
+                                {
+                                    <a href="/Product/Category?id=@product.category.id&title=@product.category.name">@product.category.name<span class="breadcrumb-sep">/</span></a>
+                                }
+                            }
+                            <span class="active">@product.name</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Page Title Area ==-->
+    <!--== Start Shop Area ==-->
+    <section class="product-area shop-single-product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="single-product-slider">
+                        <div class="single-product-thumb">
+                            <div class="zoom zoom-hover">
+                                <div class="thumb-item">
+                                    <a class="lightbox-image" data-fancybox="gallery" href="assets/img/shop/details/d1.webp">
+                                        <img src="@product.image" alt="Image-HasTech">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="single-product-info">
+                        <h4 class="title">@product.name</h4>
+
+                        @*<div class="prices">
+                                    <span class="price">64.43</span>
+                                </div>
+
+                            </div>
+                            <p class="product-desc">توضیح مختصر</p>
+                            <div class="quick-product-action">
+
+                                <div class="action-bottom">
+                                    <a class="btn-theme" href="shop-checkout.html">ثبت سفارش</a>
+                                </div>
+                            </div>*@
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Shop Area ==-->
+    <!--== Start Shop Tab Area ==-->
+    <section class="product-area product-description-review-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product-description-review">
+                        <ul class="nav nav-tabs product-description-tab-menu" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+
+                                <button class="nav-link active" id="product-desc-tab" data-bs-toggle="tab" data-bs-target="#productDesc" type="button" role="tab" aria-controls="productDesc" aria-selected="true">توضیحات</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="product-info-tab" data-bs-toggle="tab" data-bs-target="#productInfo" type="button" role="tab" aria-controls="productInfo" aria-selected="false">مشخصات</button>
+                            </li>
+                            @*<li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="product-comment-tab" data-bs-toggle="tab" data-bs-target="#commentProduct" type="button" role="tab" aria-controls="commentProduct" aria-selected="false">نظرات</button>
+                                </li>*@
+
+                        </ul>
+                        <div class="tab-content product-description-tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="productDesc" role="tabpanel" aria-labelledby="product-desc-tab">
+                                <div class="product-desc">
+                                    <p>@product.description</p>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="commentProduct" role="tabpanel" aria-labelledby="product-comment-tab">
+                                <div class="product-comment">
+                                    <form action="#">
+                                        <div class="product-comment-content">
+                                            <img src="assets/img/shop/comment.png" alt="Image-HasTech">
+                                            <textarea name="con_message" placeholder="نظر خود را وارد کنید"></textarea>
+
+
+                                        </div>
+                                        <button class="btn btn-theme" type="submit">ثبت نظر</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="productInfo" role="tabpanel" aria-labelledby="product-info-tab">
+                                @*<h4>Size Chart</h4>*@
+                                @{
+                                    if (product.productProperties != null)
+                                    {
+                                        foreach (ProductPropertyEntity item in product.productProperties)
+                                        {
+                                            <div class="d-flex p-2">
+                                                <div class="w-25 text-center"><b>@item.Property.name</b></div>
+                                                <div class="w-75 pb-2 border-bottom">@item.value</div>
+                                            </div>
+                                        }
+                                    }
+                                }
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Shop Tab Area ==-->
+</main>
+
+

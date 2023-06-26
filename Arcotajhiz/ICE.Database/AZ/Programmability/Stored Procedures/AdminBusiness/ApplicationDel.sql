@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [AZ].[ApplicationDel] @VCode INT AS
+BEGIN
+	BEGIN TRY
+		DELETE [UserManagement].[AZ].[Application] WHERE VCode = @VCode
+	END TRY
+	BEGIN CATCH
+		DECLARE @ErrNo INT,@ErrMsg NVARCHAR(4000),@ErrSev INT,@ErrStt INT
+		SELECT @ErrMsg = '(' + CONVERT(NVARCHAR(4000),ERROR_NUMBER()) + ') ' + ERROR_MESSAGE(),@ErrSev = ERROR_SEVERITY(),@ErrStt = ERROR_STATE()
+		RAISERROR(@ErrMsg,@ErrSev,@ErrStt)
+	END CATCH
+END
+GO
+

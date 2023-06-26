@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F307D44E-F48C-48CA-BC79-718C55B56191}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ARCO.Business</RootNamespace>
+    <AssemblyName>ARCO.Business</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ARCO.Business.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ARCO.Business.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseSandBox|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ReleaseSandBox\</OutputPath>
+    <DocumentationFile>ARCO.Business.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.2\lib\net6.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARCOConnection.vb" />
+    <Compile Include="Businesses\ApplicationBusiness.vb" />
+    <Compile Include="Businesses\CallBusiness.vb" />
+    <Compile Include="Businesses\ComplaintBusiness.vb" />
+    <Compile Include="Businesses\ContactUsBusiness.vb" />
+    <Compile Include="Businesses\ContentBusiness.vb" />
+    <Compile Include="Businesses\CryptographyBusiness.vb" />
+    <Compile Include="Businesses\IdentificationBusiness.vb" />
+    <Compile Include="Businesses\LogBusiness.vb" />
+    <Compile Include="Businesses\NotificationBusiness.vb" />
+    <Compile Include="Businesses\ProductBusiness.vb" />
+    <Compile Include="Businesses\SecurityBusiness.vb" />
+    <Compile Include="Businesses\SmsBusiness.vb" />
+    <Compile Include="Businesses\UserBusiness.vb" />
+    <Compile Include="Engine.vb" />
+    <Compile Include="ICELogConnection.vb" />
+    <Compile Include="Models\ApiData.vb" />
+    <Compile Include="Models\ApiLogData.vb" />
+    <Compile Include="Models\ApplicationData.vb" />
+    <Compile Include="Models\BankBailData.vb" />
+    <Compile Include="Models\BankBailTypeData.vb" />
+    <Compile Include="Models\BankData.vb" />
+    <Compile Include="Models\BaseData.vb" />
+    <Compile Include="Models\BatchResultXmlData.vb" />
+    <Compile Include="Models\BorrowerClassificationData.vb" />
+    <Compile Include="Models\BouncedChequeData.vb" />
+    <Compile Include="Models\CallData.vb" />
+    <Compile Include="Models\CheckIndividualReportExistenceResponse.vb" />
+    <Compile Include="Models\ContactTypeData.vb" />
+    <Compile Include="Models\ContactUsData.vb" />
+    <Compile Include="Models\ExceptionData.vb" />
+    <Compile Include="Models\GenderData.vb" />
+    <Compile Include="Models\KycData.vb" />
+    <Compile Include="Models\LoginData.vb" />
+    <Compile Include="Models\FAQData.vb" />
+    <Compile Include="Models\PagesImageData.vb" />
+    <Compile Include="Models\PagesTypeData.vb" />
+    <Compile Include="Models\RoleData.vb" />
+    <Compile Include="Models\SmsData.vb" />
+    <Compile Include="Models\SMSLogData.vb" />
+    <Compile Include="Models\TopicData.vb" />
+    <Compile Include="Models\TotalPagesRateData.vb" />
+    <Compile Include="Models\TypeOfFinancingData.vb" />
+    <Compile Include="Models\UserDashboardData.vb" />
+    <Compile Include="Models\UserData.vb" />
+    <Compile Include="Models\UserLastSevenDaysSeenData.vb" />
+    <Compile Include="Models\UserLastSevenHoursData.vb" />
+    <Compile Include="Models\UserRegisterationData.vb" />
+    <Compile Include="Models\UserUpdateData.vb" />
+    <Compile Include="Models\VerificationStateData.vb" />
+    <Compile Include="Models\VisitLogData.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ICE.Entities\ARCO.Entities.vbproj">
+      <Project>{dcdb05ce-3ede-49e6-b8eb-abe175399fee}</Project>
+      <Name>ARCO.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="XmlSample\CompleteAndHasScore\IndividualAvailability.xml" />
+    <Content Include="XmlSample\CompleteAndHasScore\IndividualReport.xml" />
+    <Content Include="XmlSample\CompleteAndHasScore\IndividualScore.xml" />
+    <Content Include="XmlSample\JustHasNationalCode\IndividualAvailability.xml" />
+    <Content Include="XmlSample\WithoutFinantialData\IndividualAvailability.xml" />
+    <Content Include="XmlSample\WithoutFinantialData\IndividualReport.xml" />
+    <Content Include="XmlSample\WithoutFinantialData\IndividualScore.xml" />
+    <Content Include="XmlSample\WithoutNegetiveScore\IndividualAvailability.xml" />
+    <Content Include="XmlSample\WithoutNegetiveScore\IndividualReport.xml" />
+    <Content Include="XmlSample\WithoutNegetiveScore\IndividualScore.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

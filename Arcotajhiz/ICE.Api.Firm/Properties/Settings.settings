@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ICE.Api.Firm.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ICE_Api_Firm_ir_shaparak_sep_PaymentIFBinding" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://sep.shaparak.ir/MultiSettle/payments/initpayment.asmx</Value>
+    </Setting>
+    <Setting Name="ICE_Api_Firm_ir_shaparak_bpm_PaymentGatewayImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://bpm.shaparak.ir/pgwchannel/services/pgw</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

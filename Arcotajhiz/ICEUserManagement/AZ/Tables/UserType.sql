@@ -1,0 +1,8 @@
+﻿CREATE TABLE [AZ].[UserType]
+(
+	[VCode]		SMALLINT		NOT NULL,
+	[Code]		SMALLINT        NOT NULL,
+	[Name]		NVARCHAR (50)   NOT NULL,
+	[EnumName]	NVARCHAR (50)	NOT NULL,
+    CONSTRAINT [PK_UserType] PRIMARY KEY ([VCode])
+)

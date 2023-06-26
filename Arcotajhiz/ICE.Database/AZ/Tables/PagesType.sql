@@ -1,0 +1,8 @@
+﻿CREATE TABLE [AZ].[PagesType](
+	[id]		SMALLINT NOT NULL,
+	[Code]		SMALLINT NULL,
+	[Name]		NVARCHAR(100) NULL,
+	[EnumName]	NVARCHAR(100) NULL,
+	CONSTRAINT [PK_PagesType] PRIMARY KEY ([id])
+)
+GO
